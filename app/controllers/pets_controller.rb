@@ -1,6 +1,7 @@
 class PetsController < ApplicationController
 
   def index
+    binding.pry
     @pets = Pet.all
   end
 

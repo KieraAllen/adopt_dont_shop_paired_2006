@@ -1,0 +1,13 @@
+<a href="/">Home</a> || <a href="/shelters">Shelter Index</a>
+
+<h1><%= @shelter.name %> Pets</h1>
+
+<%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new" %>
+
+<% @pets.each do |pet| %>
+  <h3><a href="/shelters/:id/pets/<%= pet.id %>"><%= pet.name %></a></h3>
+  <p><%= pet.image %></p>
+  <p><%= pet.approximate_age %></p>
+  <p><%= pet.sex %></p>
+  <p><%= pet.shelter_id %></p>
+<% end %>
