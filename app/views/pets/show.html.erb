@@ -4,3 +4,6 @@
 <h2><%= @pet.approximate_age %></h2>
 <h2><%= @pet.sex %></h2>
 <h2><%= @pet.adoption_status %></h2>
+
+<a href="/pets/<%= @pet.id %>/edit">Update Pet</a><br/><br/>
+<%= link_to "Update Pet", "/pets/pet.id/edit" %>
