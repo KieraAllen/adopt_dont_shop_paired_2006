@@ -1,10 +1,10 @@
-<a href="/">Home</a>
+<a href="/">Home</a> || <a href="/shelters">Shelter Index</a>
 
 <h1>All Pets</h1>
 
 <% @pets.each do |pet| %>
+  <h3><a href="/pets/<%= pet.id %>"><%= pet.name %></a></h3>
   <h3><%= pet.image %></h3>
-  <h4><%= pet.name %></h4>
   <h4><%= pet.approximate_age %></h4>
   <h4><%= pet.sex %></h4>
   <h4><%= pet.shelter.name %></h4>
