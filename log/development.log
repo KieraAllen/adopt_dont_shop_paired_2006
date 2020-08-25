@@ -8172,3 +8172,153 @@ Completed 404 Not Found in 9580ms (ActiveRecord: 1.2ms)
 ActiveRecord::RecordNotFound (Couldn't find Shelter with 'id'=:id):
   
 app/controllers/shelters/pets_controller.rb:6:in `index'
+Started GET "/pets" for ::1 at 2020-08-25 17:36:12 -0600
+Processing by PetsController#index as HTML
+Started GET "/" for ::1 at 2020-08-25 17:36:44 -0600
+  [1m[36mShelter Load (23.9ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-08-25 17:36:44 -0600
+  ↳ app/controllers/shelters/pets_controller.rb:6
+Completed 404 Not Found in 1174394ms (ActiveRecord: 30.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Shelter with 'id'=:id):
+  
+app/controllers/shelters/pets_controller.rb:6:in `index'
+  Rendering pets/index.html.erb within layouts/application
+Processing by WelcomeController#index as HTML
+  [1m[36mPet Load (48.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:5
+Processing by WelcomeController#index as HTML
+  [1m[36mShelter Load (4.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  ↳ app/views/pets/index.html.erb:10
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  Rendered pets/index.html.erb within layouts/application (77.7ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__282540466849763174_70353602655140'
+Completed 200 OK in 174ms (Views: 167.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2746ms (Views: 185.8ms | ActiveRecord: 55.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-25 17:37:00 -0600
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/lukejames-erickson/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 174ms (Views: 171.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets" for ::1 at 2020-08-25 17:37:02 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:5
+  [1m[36mShelter Load (0.7ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  Rendered pets/index.html.erb within layouts/application (69.2ms)
+Completed 200 OK in 3392ms (Views: 55.4ms | ActiveRecord: 33.2ms)
+
+
+Started GET "/shelters/:id/pets/3" for ::1 at 2020-08-25 17:37:09 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:9
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for ::1 at 2020-08-25 17:37:29 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:5
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pets/index.html.erb:10
+  Rendered pets/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 2811ms (Views: 21.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/shelters/:id/pets/1" for ::1 at 2020-08-25 17:37:52 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:9
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/shelters/:id/pets/1" for ::1 at 2020-08-25 17:38:29 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:9
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shelters/:id/pets/1" for ::1 at 2020-08-25 17:40:27 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:8
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 21.2ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/shelters/:id/pets/1" for ::1 at 2020-08-25 17:50:45 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:8
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 64ms (Views: 28.2ms | ActiveRecord: 10.8ms)
+
+

@@ -74,7 +74,7 @@ This project builds off of the solo project, Adopt Don't Shop. Between you and y
 ## User Stories
 
 ```
-[ ] done
+[x] done
 
 User Story 1, Deploy your application to Heroku
 
