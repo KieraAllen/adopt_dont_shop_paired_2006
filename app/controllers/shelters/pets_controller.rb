@@ -2,7 +2,7 @@ class Shelters::PetsController < ApplicationController
 
   def index
     @pets = Pet.where(shelter_id: params[:id])
-    binding.pry
+    # binding.pry
     @shelter = Shelter.find(params[:id])
   end
 
