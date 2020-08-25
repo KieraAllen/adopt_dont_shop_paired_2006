@@ -5,7 +5,7 @@
 <%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new" %>
 
 <% @pets.each do |pet| %>
-  <h3><a href="/pets/<%= pet.id %>"><%= pet.name %></a></h3>
+  <h3><a href="/shelters/:id/pets/<%= pet.id %>"><%= pet.name %></a></h3>
   <p><%= pet.image %></p>
   <p><%= pet.approximate_age %></p>
   <p><%= pet.sex %></p>
