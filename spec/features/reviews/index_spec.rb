@@ -31,8 +31,8 @@ RSpec.describe 'shelters index page', type: :feature do
 
     review_1 = Review.create(image: 'TBD',
                        title: 'Very cool!',
-                       content: '102',
-                       rating: 'I rather liked the place!',
+                       content: 'I rather liked the place!',
+                       rating: '5',
                        shelter_id: shelter_1.id)
     review_2 = Review.create(image: 'ETA',
                        title: 'Okay',
