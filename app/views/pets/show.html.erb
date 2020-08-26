@@ -1,3 +1,4 @@
+
 <a href="/">Home</a> || <a href="/pets">Pet Index</a> || <a href="/shelters">Shelter Index</a>
 
 <h1><%= @pet.image %></h1>
@@ -7,4 +8,4 @@
 <h2><%= @pet.sex %></h2>
 <h2><%= @pet.adoption_status %></h2>
 
-<%= link_to "Update Pet", "/pets/pet.id/edit" %>
+<a href="/pets/<%= @pet.id %>/edit">Update Pet</a><br/><br/>
