@@ -11,13 +11,13 @@
 
 require 'rails_helper'
 
-RSpec.describe "shelters show page", type: :feature do
-  it "can see the shelter with that id including attributes" do
+RSpec.describe 'shelters show page', type: :feature do
+  it 'can see the shelter with that id including attributes' do
     shelter_1 = Shelter.create(name: "The Dragon's Dream",
-                             address: "1554 Diamond Lane",
-                             city: "Destin",
-                             state: "FL",
-                             zip: "32540")
+                               address: '1554 Diamond Lane',
+                               city: 'Destin',
+                               state: 'FL',
+                               zip: '32540')
 
     visit "/shelters/#{shelter_1.id}"
 

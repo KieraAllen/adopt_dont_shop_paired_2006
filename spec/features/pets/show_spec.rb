@@ -12,21 +12,20 @@
 
 require 'rails_helper'
 
-RSpec.describe "pets show page", type: :feature do
-  it "can see the pet with that id including attributes" do
+RSpec.describe 'pets show page', type: :feature do
+  it 'can see the pet with that id including attributes' do
     shelter_1 = Shelter.create(name: "The Dragon's Dream",
-                               address: "1554 Diamond Lane",
-                               city: "Destin",
-                               state: "FL",
-                               zip: "32540")
-    pet_1 = Pet.create(image: "TBD",
-                       name: "Drax",
-                       description: "Drax is a dragon.",
-                       approximate_age: "102",
-                       sex: "M",
-                       adoption_status: "pending",
+                               address: '1554 Diamond Lane',
+                               city: 'Destin',
+                               state: 'FL',
+                               zip: '32540')
+    pet_1 = Pet.create(image: 'TBD',
+                       name: 'Drax',
+                       description: 'Drax is a dragon.',
+                       approximate_age: '102',
+                       sex: 'M',
+                       adoption_status: 'pending',
                        shelter_id: shelter_1.id)
-
 
     visit "/pets/#{pet_1.id}"
 

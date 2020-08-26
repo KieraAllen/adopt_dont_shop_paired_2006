@@ -18,15 +18,15 @@
 
 require 'rails_helper'
 
-RSpec.describe "New Shelter" do
-  describe "As a visitor" do
-    describe "When I visit a shelter show page" do
-      it "can update a shelter" do
+RSpec.describe 'New Shelter' do
+  describe 'As a visitor' do
+    describe 'When I visit a shelter show page' do
+      it 'can update a shelter' do
         shelter_1 = Shelter.create(name: "Dragon's Dream",
-                                   address: "1554 Diamond Lane",
-                                   city: "Desitin",
-                                   state: "RL",
-                                   zip: "32541")
+                                   address: '1554 Diamond Lane',
+                                   city: 'Desitin',
+                                   state: 'RL',
+                                   zip: '32541')
 
         visit "/shelters/#{shelter_1.id}"
 
@@ -35,19 +35,19 @@ RSpec.describe "New Shelter" do
         expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
 
         fill_in 'Name', with: "The Dragon's Dream"
-        fill_in 'Address', with: "1664 Diamond Lane"
-        fill_in 'City', with: "Destin"
-        fill_in 'State', with: "FL"
-        fill_in 'Zip', with: "32540"
+        fill_in 'Address', with: '1664 Diamond Lane'
+        fill_in 'City', with: 'Destin'
+        fill_in 'State', with: 'FL'
+        fill_in 'Zip', with: '32540'
 
         click_on 'Update Shelter'
 
         expect(current_path).to eq("/shelters/#{shelter_1.id}")
         expect(page).to have_content("The Dragon's Dream")
-        expect(page).to have_content("1664 Diamond Lane")
-        expect(page).to have_content("Destin")
-        expect(page).to have_content("FL")
-        expect(page).to have_content("32540")
+        expect(page).to have_content('1664 Diamond Lane')
+        expect(page).to have_content('Destin')
+        expect(page).to have_content('FL')
+        expect(page).to have_content('32540')
       end
     end
   end

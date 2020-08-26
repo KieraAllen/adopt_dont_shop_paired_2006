@@ -1,0 +1,18 @@
+
+
+<a href="/">Home</a> || <a href="/pets">Pet Index</a> || <a href="/shelters">Shelter Index</a> || <a href="/reviews">Reviews Index</a>
+
+<h1>New Review</h1>
+
+<%= form_tag "/shelters/#{@shelter_id}/reviews" do %>
+  <%= label_tag :title %>
+  <%= text_field_tag :title %>
+  <%= label_tag :rating %>
+  <%= text_field_tag :rating %>
+  <%= label_tag :content %>
+  <%= text_field_tag :content %>
+  <%= label_tag :image %>
+  <%= text_field_tag :image %>
+
+  <%= submit_tag 'Create Review' %>
+<% end %>

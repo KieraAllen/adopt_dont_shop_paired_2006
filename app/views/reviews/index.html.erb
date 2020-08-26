@@ -1,0 +1,12 @@
+<a href="/">Home</a> || <a href="/shelters">Shelter Index</a> || <a href="/pets">Pet Index</a> || <a href="/reviews">Reviews Index</a> 
+
+<h1>All Reviews</h1>
+
+<% @reviews.each do |review| %>
+  <h2><%= review.shelter.name %></h2>
+  <h3><a href="/shelters/:id/reviews/<%= review.id %>"><%= review.title %></a></h3>
+  <h3><%= review.rating %></h3>
+  <h4><%= review.content %></h4>
+  <h4><%= review.image %></h4>
+
+<% end %>

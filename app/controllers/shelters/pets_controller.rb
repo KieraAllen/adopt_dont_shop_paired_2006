@@ -1,8 +1,7 @@
 class Shelters::PetsController < ApplicationController
-
   def index
-    @pets = Pet.where(shelter_id: params[:id])
     # binding.pry
+    @pets = Pet.where(shelter_id: params[:id])
     @shelter = Shelter.find(params[:id])
   end
 
@@ -10,9 +9,19 @@ class Shelters::PetsController < ApplicationController
     @shelter_id = params[:id]
   end
 
+  def edit
+    @shelter = Shelter.find(params[:id])
+  end
+
   def create
     shelter = Shelter.find(params[:id])
     shelter.pets.create(pet_params)
+    redirect_to "/shelters/#{params[:id]}/pets"
+  end
+
+  def destroy
+    shelter = Shelter.find(params[:id])
+    shelter.pets.destroy(pet_params)
     redirect_to "/shelters/#{params[:id]}/pets"
   end
 
