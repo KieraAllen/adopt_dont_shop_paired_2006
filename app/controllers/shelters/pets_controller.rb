@@ -1,5 +1,4 @@
 class Shelters::PetsController < ApplicationController
-
   def index
     # binding.pry
     @pets = Pet.where(shelter_id: params[:id])

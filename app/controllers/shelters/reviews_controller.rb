@@ -1,5 +1,4 @@
 class Shelters::ReviewsController < ApplicationController
-
   def index
     @reviews = Review.where(shelter_id: params[:id])
     @shelter = Shelter.find(params[:id])
@@ -15,11 +14,11 @@ class Shelters::ReviewsController < ApplicationController
 
   def create
     shelter = Shelter.find(params[:id])
-    if review_params.values.any?("") == false
+    if review_params.values.any?('') == false
       shelter.reviews.create(review_params)
       redirect_to "/shelters/#{params[:id]}/reviews"
     else
-      redirect_to "/shelters/#{params[:id]}/review/new", danger: "You need to fill in a title, rating, and content in order to submit a shelter review"
+      redirect_to "/shelters/#{params[:id]}/review/new", danger: 'You need to fill in a title, rating, and content in order to submit a shelter review'
     end
   end
 

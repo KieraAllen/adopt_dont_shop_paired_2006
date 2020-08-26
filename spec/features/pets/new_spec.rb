@@ -19,34 +19,34 @@
 
 require 'rails_helper'
 
-RSpec.describe "creating a new pet" do
-  it "can create a pet" do
+RSpec.describe 'creating a new pet' do
+  it 'can create a pet' do
     shelter_1 = Shelter.create(name: "The Dragon's Dream",
-                               address: "1554 Diamond Lane",
-                               city: "Destin",
-                               state: "FL",
-                               zip: "32540")
+                               address: '1554 Diamond Lane',
+                               city: 'Destin',
+                               state: 'FL',
+                               zip: '32540')
 
     visit "/shelters/#{shelter_1.id}/pets"
 
-    click_link "Create Pet"
+    click_link 'Create Pet'
 
     expect(current_path).to eq("/shelters/#{shelter_1.id}/pets/new")
 
-    fill_in "Image", with: "TBD"
-    fill_in "Name", with: "Drax"
-    fill_in "Description", with: "Drax is a Dragon."
-    fill_in :approximate_age, with: "102"
-    fill_in "Sex", with: "M"
+    fill_in 'Image', with: 'TBD'
+    fill_in 'Name', with: 'Drax'
+    fill_in 'Description', with: 'Drax is a Dragon.'
+    fill_in :approximate_age, with: '102'
+    fill_in 'Sex', with: 'M'
 
     click_on 'Create Pet'
 
     new_pet = Pet.last
 
     expect(current_path).to eq("/shelters/#{shelter_1.id}/pets")
-    expect(page).to have_content("TBD")
-    expect(page).to have_content("Drax")
+    expect(page).to have_content('TBD')
+    expect(page).to have_content('Drax')
     expect(page).to have_content(new_pet.name)
-    expect(page).to have_content("102")
+    expect(page).to have_content('102')
   end
 end

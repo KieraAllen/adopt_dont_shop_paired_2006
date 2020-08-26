@@ -1,5 +1,4 @@
 class SheltersController < ApplicationController
-
   def index
     @shelters = Shelter.all
   end
@@ -8,8 +7,7 @@ class SheltersController < ApplicationController
     @shelter = Shelter.find(params[:id])
   end
 
-  def new
-  end
+  def new; end
 
   def create
     Shelter.create(shelter_params)
@@ -32,6 +30,7 @@ class SheltersController < ApplicationController
   end
 
   private
+
   def shelter_params
     params.permit(:name,
                   :address,

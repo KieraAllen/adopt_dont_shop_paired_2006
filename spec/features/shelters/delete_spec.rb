@@ -10,18 +10,18 @@
 
 require 'rails_helper'
 
-RSpec.describe "As a visitor to the shelter show page" do
-  it "I can delete a shelter" do
+RSpec.describe 'As a visitor to the shelter show page' do
+  it 'I can delete a shelter' do
     shelter_1 = Shelter.create(name: "The Dragon's Dream",
-                             address: "1554 Diamond Lane",
-                             city: "Destin",
-                             state: "FL",
-                             zip: "32540")
+                               address: '1554 Diamond Lane',
+                               city: 'Destin',
+                               state: 'FL',
+                               zip: '32540')
     visit "/shelters/#{shelter_1.id}"
 
-    click_button "Delete Shelter"
+    click_button 'Delete Shelter'
 
-    expect(current_path).to eq("/shelters")
+    expect(current_path).to eq('/shelters')
     expect(page).to_not have_content(shelter_1.name)
     expect(page).to_not have_button('Delete')
   end
