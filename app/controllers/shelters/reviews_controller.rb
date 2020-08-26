@@ -1,7 +1,6 @@
 class Shelters::ReviewsController < ApplicationController
 
   def index
-    # binding.pry
     @reviews = Review.where(shelter_id: params[:id])
     @shelter = Shelter.find(params[:id])
   end
@@ -12,13 +11,19 @@ class Shelters::ReviewsController < ApplicationController
 
   def create
     shelter = Shelter.find(params[:id])
-    shelter.reviews.create(pet_params)
+    shelter.reviews.create(review_params)
+    redirect_to "/shelters/#{params[:id]}/reviews"
+  end
+
+  def destroy
+    shelter = Shelter.find(params[:id])
+    shelter.reviews.destroy(review_params)
     redirect_to "/shelters/#{params[:id]}/reviews"
   end
 
   private
 
-  def pet_params
+  def review_params
     params.permit(:title,
                   :rating,
                   :content,

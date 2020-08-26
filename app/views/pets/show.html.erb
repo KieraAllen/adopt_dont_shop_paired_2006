@@ -1,5 +1,5 @@
 
-<a href="/">Home</a> || <a href="/pets">Pet Index</a> || <a href="/shelters">Shelter Index</a>
+<a href="/">Home</a> || <a href="/pets">Pet Index</a> || <a href="/shelters">Shelter Index</a> || <a href="/reviews">Reviews Index</a> 
 
 <h1><%= @pet.image %></h1>
 <h2><%= @pet.name %></h2>
@@ -9,3 +9,7 @@
 <h2><%= @pet.adoption_status %></h2>
 
 <a href="/pets/<%= @pet.id %>/edit">Update Pet</a><br/><br/>
+
+
+
+<%= button_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %></br></br></br>

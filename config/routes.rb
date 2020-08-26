@@ -16,12 +16,14 @@ Rails.application.routes.draw do
   get '/shelters/:id/pets/new', to: 'shelters/pets#new'
   post '/shelters/:id/pets', to: 'shelters/pets#create'
   get '/shelters/:id/pets/:id', to: 'pets#show'
+  delete '/pets/:id', to: 'shelters/pets#destroy'
 
+  get '/reviews', to: 'reviews#index'
   get '/shelters/:id/reviews', to: 'shelters/reviews#index'
   get '/reviews/:id/edit', to: 'reviews#edit'
   get '/reviews/:id', to: 'reviews#show'
-  get '/shelters/:id/reviews/new', to: 'shelters/reviews#new'
+  get '/shelters/:id/review/new', to: 'shelters/reviews#new'
   post '/shelters/:id/reviews', to: 'shelters/reviews#create'
   get '/shelters/:id/reviews/:id', to: 'reviews#show'
-
+  delete '/reviews/:id', to: 'shelters/reviews#destroy'
 end

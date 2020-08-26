@@ -7,4 +7,9 @@ class ReviewsController < ApplicationController
   def show
     @review = Review.find(params[:id])
   end
+
+  def destroy
+    Review.destroy(params[:id])
+    redirect_to '/reviews'
+  end
 end
