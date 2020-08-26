@@ -13,11 +13,15 @@ Rails.application.routes.draw do
   get '/shelters/:id/pets', to: 'shelters/pets#index'
   get '/pets/:id/edit', to: 'pets#edit'
   get '/pets/:id', to: 'pets#show'
-
   get '/shelters/:id/pets/new', to: 'shelters/pets#new'
   post '/shelters/:id/pets', to: 'shelters/pets#create'
-
   get '/shelters/:id/pets/:id', to: 'pets#show'
 
+  get '/shelters/:id/reviews', to: 'shelters/reviews#index'
+  get '/reviews/:id/edit', to: 'reviews#edit'
+  get '/reviews/:id', to: 'reviews#show'
+  get '/shelters/:id/reviews/new', to: 'shelters/reviews#new'
+  post '/shelters/:id/reviews', to: 'shelters/reviews#create'
+  get '/shelters/:id/reviews/:id', to: 'reviews#show'
 
 end

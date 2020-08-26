@@ -12,4 +12,4 @@
 
 <%= button_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %></br></br></br>
 
-<a href="/shelters/#{@shelter.id}/reviews/">Reviews This Shelter</a></br>
+<%= link_to "Reviews This Shelter", "/shelters/#{@shelter.id}/reviews/" %> </br></br>

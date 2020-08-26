@@ -1,7 +1,7 @@
 class Shelters::ReviewsController < ApplicationController
 
   def index
-    binding.pry
+    # binding.pry
     @reviews = Review.where(shelter_id: params[:id])
     @shelter = Shelter.find(params[:id])
   end
