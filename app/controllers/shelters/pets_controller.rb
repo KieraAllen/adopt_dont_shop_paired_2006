@@ -10,6 +10,10 @@ class Shelters::PetsController < ApplicationController
     @shelter_id = params[:id]
   end
 
+  def edit
+    @shelter = Shelter.find(params[:id])
+  end
+
   def create
     shelter = Shelter.find(params[:id])
     shelter.pets.create(pet_params)

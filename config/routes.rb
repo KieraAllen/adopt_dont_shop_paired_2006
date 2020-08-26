@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get '/reviews', to: 'reviews#index'
   get '/shelters/:id/reviews', to: 'shelters/reviews#index'
-  get '/reviews/:id/edit', to: 'reviews#edit'
+  get '/reviews/:id/edit', to: 'shelters/reviews#edit'
   get '/reviews/:id', to: 'reviews#show'
   get '/shelters/:id/review/new', to: 'shelters/reviews#new'
   post '/shelters/:id/reviews', to: 'shelters/reviews#create'

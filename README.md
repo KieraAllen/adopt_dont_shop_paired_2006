@@ -123,7 +123,7 @@ and I can see my new review
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 4, Shelter Review Creation, cont.
 

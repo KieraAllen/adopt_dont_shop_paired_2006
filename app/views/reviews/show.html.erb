@@ -1,6 +1,6 @@
 
 
-<a href="/">Home</a> || <a href="/pets">Pet Index</a> || <a href="/shelters">Shelter Index</a> || <a href="/reviews">Reviews Index</a> 
+<a href="/">Home</a> || <a href="/pets">Pet Index</a> || <a href="/shelters">Shelter Index</a> || <a href="/reviews">Reviews Index</a>
 
 <h1><%= @review.title %></h1>
 <h2><%= @review.rating %></h2>
@@ -10,5 +10,5 @@
 
 <a href="/reviews/<%= @review.id %>/edit">Update Review</a><br/><br/>
 
-
+/reviews/:id/edit'
 <%= button_to "Delete Review", "/reviews/#{@review.id}", method: :delete %></br></br></br>
