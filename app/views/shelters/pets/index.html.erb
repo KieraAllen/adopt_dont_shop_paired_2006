@@ -1,8 +1,8 @@
 <a href="/">Home</a> || <a href="/shelters">Shelter Index</a> || <a href="/pets">Pet Index</a> || <a href="/reviews">Reviews Index</a> || <a href="/favorites">Favorites</a>
 </br></br> ||
-<a href="javascript:history.back()">Go Back</a>
+<a href="javascript:history.back()">Go Back</a> ||
 
-<h1><%= @shelter.name %> Pets</h1>
+<h1>Pets at the <%= @shelter.name %> Shelter</h1>
 
 <%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new" %>
 
