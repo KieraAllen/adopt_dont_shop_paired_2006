@@ -8,9 +8,17 @@ class Shelters::ReviewsController < ApplicationController
     @shelter_id = params[:id]
   end
 
-  def edit
-    @shelter = Shelter.find(params[:id])
-  end
+  # def edit
+  #   shelter = Shelter.find(params[:id])
+  #   binding.pry
+  #   if review_params.values.any?('') == false
+  #     shelter.reviews.edit(review_params)
+  #     redirect_to "/shelters/#{params[:id]}/reviews"
+  #   else
+  #     redirect_to "/shelters/#{params[:id]}/review/new", danger: 'You need to fill in a title, rating, and content in order to submit a shelter review'
+  #   end
+  # end
+
 
   def create
     shelter = Shelter.find(params[:id])
@@ -23,9 +31,8 @@ class Shelters::ReviewsController < ApplicationController
   end
 
   def destroy
-    shelter = Shelter.find(params[:id])
-    shelter.reviews.destroy(review_params)
-    redirect_to "/shelters/#{params[:id]}/reviews"
+    Review.destroy(params[:id])
+    redirect_to "/reviews"
   end
 
   private
@@ -35,5 +42,13 @@ class Shelters::ReviewsController < ApplicationController
                   :rating,
                   :content,
                   :image)
+  end
+
+  def shelter_params
+    params.permit(:name,
+                  :address,
+                  :city,
+                  :state,
+                  :zip)
   end
 end
