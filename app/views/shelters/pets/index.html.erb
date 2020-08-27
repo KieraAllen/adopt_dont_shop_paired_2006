@@ -1,4 +1,6 @@
-<a href="/">Home</a> || <a href="/shelters">Shelter Index</a> || <a href="/pets">Pet Index</a> || <a href="/reviews">Reviews Index</a>
+<a href="/">Home</a> || <a href="/shelters">Shelter Index</a> || <a href="/pets">Pet Index</a> || <a href="/reviews">Reviews Index</a> || <a href="/favorites">Favorites</a>
+</br></br> ||
+<a href="javascript:history.back()">Go Back</a>
 
 <h1><%= @shelter.name %> Pets</h1>
 
@@ -10,4 +12,5 @@
   <p><%= pet.approximate_age %></p>
   <p><%= pet.sex %></p>
   <p><%= pet.shelter_id %></p>
+  <%= button_to "Add Pet To Favorites", "/favorites/#{pet.id}", method: :patch %>
 <% end %>

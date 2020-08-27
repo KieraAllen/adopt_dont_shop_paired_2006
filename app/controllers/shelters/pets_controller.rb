@@ -8,10 +8,6 @@ class Shelters::PetsController < ApplicationController
     @shelter_id = params[:id]
   end
 
-  # def edit
-  #   @shelter = Shelter.find(params[:id])
-  # end
-
   def create
     shelter = Shelter.find(params[:id])
     if pet_params.values.any?('') == false
@@ -21,7 +17,7 @@ class Shelters::PetsController < ApplicationController
       redirect_to "/shelters/#{params[:id]}/pets/new", danger: 'You need to fill in a name, description, approximate_age, sex, and image in order to submit a pet'
     end
   end
-  #
+  
   def destroy
     Pet.destroy(params[:id])
     redirect_to "/pets"
