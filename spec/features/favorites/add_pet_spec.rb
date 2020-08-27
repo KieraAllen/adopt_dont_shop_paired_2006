@@ -19,14 +19,17 @@ RSpec.describe "When a user adds pet to their favorites" do
       click_button "Add Pet To Favorites"
     end
 
-    # within("#pet-#{pet_2.id}") do
-    #   click_button "Add Song"
-    # end
-    #
-    # within("#pet-#{pet_1.id}") do
-    #   click_button "Add Song"
-    # end
+    within("#pet-#{pet_2.id}") do
+      click_button "Add Song"
+    end
 
-    expect(page).to have_content("You now have 1 copy of #{pet_1.name} in your favorites.")
+    within("#pet-#{pet_1.id}") do
+      click_button "Add Song"
+    end
+
+    expect(page).to have_content("You now have #{pluralize(quantity, 'copy')} of #{pet.name} in your Favorites.")
+
+    expect(page).to have_content("Favorites: 3")
   end
+
 end
