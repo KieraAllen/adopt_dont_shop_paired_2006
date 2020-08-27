@@ -7,8 +7,29 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
   end
 
-  def destroy
-    Review.destroy(params[:id])
-    redirect_to '/reviews'
+  def new; end
+
+  def edit
+    @review = Review.find(params[:id])
+  end
+
+  def update
+    @review = Review.find(params[:id])
+    @review.update(review_params)
+    redirect_to "/reviews/#{@review.id}"
+  end
+
+  # def destroy
+  #   Review.destroy(params[:id])
+  #   redirect_to '/reviews'
+  # end
+
+  private
+
+  def review_params
+    params.permit(:title,
+                  :rating,
+                  :content,
+                  :image)
   end
 end

@@ -164,7 +164,7 @@ And I'm returned to the edit form to edit that review
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 7, Delete a Shelter Review
 

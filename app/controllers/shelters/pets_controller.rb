@@ -1,6 +1,5 @@
 class Shelters::PetsController < ApplicationController
   def index
-    # binding.pry
     @pets = Pet.where(shelter_id: params[:id])
     @shelter = Shelter.find(params[:id])
   end
@@ -9,20 +8,23 @@ class Shelters::PetsController < ApplicationController
     @shelter_id = params[:id]
   end
 
-  def edit
-    @shelter = Shelter.find(params[:id])
-  end
+  # def edit
+  #   @shelter = Shelter.find(params[:id])
+  # end
 
   def create
     shelter = Shelter.find(params[:id])
-    shelter.pets.create(pet_params)
-    redirect_to "/shelters/#{params[:id]}/pets"
+    if pet_params.values.any?('') == false
+      shelter.pets.create(pet_params)
+      redirect_to "/shelters/#{params[:id]}/pets"
+    else
+      redirect_to "/shelters/#{params[:id]}/pets/new", danger: 'You need to fill in a name, description, approximate_age, sex, and image in order to submit a pet'
+    end
   end
-
+  #
   def destroy
-    shelter = Shelter.find(params[:id])
-    shelter.pets.destroy(pet_params)
-    redirect_to "/shelters/#{params[:id]}/pets"
+    Pet.destroy(params[:id])
+    redirect_to "/pets"
   end
 
   private
@@ -33,5 +35,13 @@ class Shelters::PetsController < ApplicationController
                   :description,
                   :approximate_age,
                   :sex)
+  end
+
+  def shelter_params
+    params.permit(:name,
+                  :address,
+                  :city,
+                  :state,
+                  :zip)
   end
 end
