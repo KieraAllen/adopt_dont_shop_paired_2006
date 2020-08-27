@@ -21,7 +21,6 @@ class Shelters::PetsController < ApplicationController
   end
 
   def create
-    binding.pry
     shelter = Shelter.find(params[:id])
     if pet_params.values.any?('') == false
       shelter.pets.create(pet_params)
