@@ -30,6 +30,7 @@ RSpec.describe Favorites do
     end
   end
 
+
   it "adds a pet that hasn't been added yet" do
     subject.add_pet('3')
 

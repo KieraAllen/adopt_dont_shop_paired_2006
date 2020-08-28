@@ -1,7 +1,6 @@
 class Shelters::PetsController < ApplicationController
   def index
     @shelter = Shelter.find(params[:shelter_id])
-    @pets = @shelter.pets.all
   end
 
   def new
@@ -11,7 +10,6 @@ class Shelters::PetsController < ApplicationController
   def edit
     pet = Pet.find(params[:id])
     shelter = Shelter.find(pet.shelter_id)
-    # binding.pry
     if pet_params.values.any?('') == false
       shelter.pets.create(pet_params)
       redirect_to "/shelters/#{params[:id]}/pets"

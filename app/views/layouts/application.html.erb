@@ -8,7 +8,11 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-<p>Favorites: <%= @favorites.total_count %></p>
+
+
+<%# if session[:favorites] then display %>
+
+<%# <p>Favorites: <%= @favorites.total_count </p> %>
   <body>
     <% flash.each do |name, message| %>
       <div class='alert alert-<%= name %>'></div>

@@ -7,9 +7,14 @@
 <%= link_to "Create Review", "/shelters/#{@shelter.id}/review/new" %>
 
 <% @reviews.each do |review| %>
-  <h3><a href="<%= review.id %>"><%= review.title %></a></h3>
+
+  <h3> <%=  link_to review.title, "/shelters/#{@shelter.id}/reviews/#{review.id}" %>  </h3>
+
   <p><%= review.rating %></p>
   <p><%= review.content %></p>
   <p><%= review.image %></p>
   <p><%= review.shelter_id %></p>
 <% end %>
+
+
+<!-- the old line 11: <h3><a href="<%= review.id %>"><%= review.title %></a></h3> -->
