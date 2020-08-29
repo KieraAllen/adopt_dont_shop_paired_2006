@@ -90,7 +90,7 @@ the application must be hosted on Heroku.
 Users will be able to share their experiences with a shelter through providing reviews. Users should be able to create a review with a title (Example: "Awesome place!"), a rating (out of 5), and content (Example: "Truly enjoyed our time working with this shelter. Staff was great, and we found our perfect pet!"). A user can also upload one picture (image url address) for their review as well, but this is optional.
 
 ```
-[ .5] done
+[x] done
 
 User Story 2, Shelter Reviews
 
@@ -121,7 +121,7 @@ I also see a field where I can enter an optional image (web address)
 When the form is submitted, I should return to that shelter's show page
 and I can see my new review
 ```
-
+ 
 ```
 [x] done
 
