@@ -22842,3 +22842,280 @@ Processing by SheltersController#show as HTML
 Completed 200 OK in 128ms (Views: 115.9ms | ActiveRecord: 6.7ms)
 
 
+Started GET "/shelters/4" for ::1 at 2020-08-29 16:47:36 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/lukejames-erickson/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 221ms (Views: 193.0ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/shelters/4" for ::1 at 2020-08-29 16:49:08 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shelters/4" for ::1 at 2020-08-29 16:49:26 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shelters/4" for ::1 at 2020-08-29 16:49:27 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shelters/4" for ::1 at 2020-08-29 16:49:34 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shelters/4" for ::1 at 2020-08-29 16:50:13 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shelters/" for ::1 at 2020-08-29 16:50:14 -0600
+Processing by SheltersController#index as HTML
+  Rendering shelters/index.html.erb within layouts/application
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT "shelters".* FROM "shelters"[0m
+  ↳ app/views/shelters/index.html.erb:9
+  Rendered shelters/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shelters/4" for ::1 at 2020-08-29 16:50:19 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shelters/4/reviews/new" for ::1 at 2020-08-29 17:04:57 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"4"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shelters/4/reviews" for ::1 at 2020-08-29 17:05:01 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XOpSTKVSbvF+2EZKy/i4VVRswjRvvQheXEsa2UsOFqzv197GbAFYXfBJn4fWo20c8N0tHrU3cPY77fQFAwwufA==", "title"=>"asdf", "rating"=>"asdf", "content"=>"asdf", "image"=>"asdf", "commit"=>"Create Review", "id"=>"4"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters/reviews_controller.rb:12
+Unpermitted parameters: :utf8, :authenticity_token, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shelters/reviews_controller.rb:14
+  [1m[36mReview Create (1.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "asdf"], ["rating", "asdf"], ["content", "asdf"], ["image", "asdf"], ["shelter_id", 4], ["created_at", "2020-08-29 23:05:01.213944"], ["updated_at", "2020-08-29 23:05:01.213944"]]
+  ↳ app/controllers/shelters/reviews_controller.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shelters/reviews_controller.rb:14
+Redirected to http://localhost:3000/shelters/4
+Completed 302 Found in 60ms (ActiveRecord: 18.5ms)
+
+
+Started GET "/shelters/4" for ::1 at 2020-08-29 17:05:01 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:8
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shelters/asdf" for ::1 at 2020-08-29 17:05:01 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Shelter with 'id'=asdf):
+  
+app/controllers/shelters_controller.rb:8:in `show'
+Started GET "/shelters/4" for ::1 at 2020-08-29 17:23:30 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 71ms (Views: 36.6ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/shelters/asdf" for ::1 at 2020-08-29 17:23:31 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Shelter with 'id'=asdf):
+  
+app/controllers/shelters_controller.rb:7:in `show'
+Started GET "/reviews/12/edit" for ::1 at 2020-08-29 17:23:40 -0600
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:14
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/reviews/12" for ::1 at 2020-08-29 17:23:46 -0600
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OOeUcRgWpwf4mLO4aktbC1e5VWiT1QdbuM0OMLR8IAiL2hj70UWRq3YJanV3EI5C8wi6Qklff/Pfa+Ds/H4Y2A==", "title"=>"dafgarh", "rating"=>"adfhdfa", "content"=>"", "shelter_id"=>"", "image"=>"", "commit"=>"Update Review", "id"=>"12"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:18
+Unpermitted parameters: :utf8, :_method, :authenticity_token, :shelter_id, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:19
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:19
+Redirected to http://localhost:3000/shelters/4
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/shelters/4" for ::1 at 2020-08-29 17:23:46 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shelters/asdf" for ::1 at 2020-08-29 17:23:46 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[36mShelter Load (1.7ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+Completed 404 Not Found in 3ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Shelter with 'id'=asdf):
+  
+app/controllers/shelters_controller.rb:7:in `show'
+Started GET "/reviews/13/edit" for ::1 at 2020-08-29 17:23:50 -0600
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:14
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/reviews/13" for ::1 at 2020-08-29 17:23:53 -0600
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mt4rAr30wG2wOMOEvaX11KENKE1MiGDxzcSbWSfsaKyB46eIdKf2wT6pGkmg/iCdBbzHZ5YCGFmqYnWFb+5QfA==", "title"=>"", "rating"=>"sdag", "content"=>"", "shelter_id"=>"", "image"=>"", "commit"=>"Update Review", "id"=>"13"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:18
+Unpermitted parameters: :utf8, :_method, :authenticity_token, :shelter_id, :commit, :id
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:19
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:19
+Redirected to http://localhost:3000/shelters/4
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/shelters/4" for ::1 at 2020-08-29 17:23:53 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 4]]
+  ↳ app/views/shelters/show.html.erb:21
+  Rendered shelters/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/shelters/asdf" for ::1 at 2020-08-29 17:23:53 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[36mShelter Load (6.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+Completed 404 Not Found in 8ms (ActiveRecord: 6.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Shelter with 'id'=asdf):
+  
+app/controllers/shelters_controller.rb:7:in `show'
+Started GET "/reviews/12/edit" for ::1 at 2020-08-29 17:24:08 -0600
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:14
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+

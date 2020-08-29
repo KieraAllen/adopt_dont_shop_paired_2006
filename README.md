@@ -121,7 +121,7 @@ I also see a field where I can enter an optional image (web address)
 When the form is submitted, I should return to that shelter's show page
 and I can see my new review
 ```
- 
+
 ```
 [x] done
 
