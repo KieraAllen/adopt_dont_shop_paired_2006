@@ -52,4 +52,7 @@ RSpec.describe 'reviews index page', type: :feature do
     expect(page).to have_text(shelter_2.name)
     expect(page).to have_text(shelter_3.name)
   end
+
+
+  
 end
