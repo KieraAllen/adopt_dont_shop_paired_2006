@@ -35,7 +35,7 @@ RSpec.describe 'shelter pets index page', type: :feature do
                        shelter_id: shelter_1.id)
     pet_3 = Pet.create(image: 'BYOB',
                        name: 'Sparkles',
-                       approximate_age: '7',
+                       approximate_age: '9999999',
                        sex: 'F',
                        shelter_id: shelter_2.id)
 

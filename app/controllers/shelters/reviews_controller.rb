@@ -8,18 +8,6 @@ class Shelters::ReviewsController < ApplicationController
     @shelter_id = params[:id]
   end
 
-  # def edit
-  #   shelter = Shelter.find(params[:id])
-  #   binding.pry
-  #   if review_params.values.any?('') == false
-  #     shelter.reviews.edit(review_params)
-  #     redirect_to "/shelters/#{params[:id]}/reviews"
-  #   else
-  #     redirect_to "/shelters/#{params[:id]}/review/new", danger: 'You need to fill in a title, rating, and content in order to submit a shelter review'
-  #   end
-  # end
-
-
   def create
     shelter = Shelter.find(params[:id])
     if review_params.values.any?('') == false

@@ -2,7 +2,7 @@
 </br></br> ||
 <a href="javascript:history.back()">Go Back</a> ||
 
-<h1>All Pets</h1>
+<h1>All Favorites</h1>
 
 <% @pets.each do |pet| %>
   <section id="pet-<%= pet.id %>">
@@ -11,6 +11,6 @@
     <p><%= pet.approximate_age %></p>
     <p><%= pet.sex %></p>
     <p><%= pet.shelter.name %></p>
-    <%= button_to "Add Pet To Favorites", "/favorites/#{pet.id}", method: :patch %>
+    <%= button_to "Remove From Favorites", "/favorites/#{@pet.id}", method: :delete %>
   </section>
 <% end %>
