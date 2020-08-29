@@ -14,7 +14,7 @@ class Shelters::ReviewsController < ApplicationController
     if review.save
       redirect_to "/shelters/#{params[:id]}"
     else
-      redirect_to "/shelters/#{params[:id]}/review/new", danger: 'You need to fill in a title, rating, and content in order to submit a shelter review'
+      redirect_to "/shelters/#{params[:id]}/reviews/new", danger: 'You need to fill in a title, rating, and content in order to submit a shelter review'
     end
   end
 
