@@ -11,8 +11,9 @@
 
 
 
-
-<p>Favorites: <%= @favorites.total_count %> </p>
+<% if @favorites %>
+  <p>Favorites: <%= @favorites.total_count %> </p>
+<% end %>
 
 
   <body>
