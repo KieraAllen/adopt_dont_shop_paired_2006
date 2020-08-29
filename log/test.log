@@ -35494,3 +35494,1140 @@ Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.8ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 17:18:36.392908"], ["updated_at", "2020-08-29 17:18:36.392908"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/59" for 127.0.0.1 at 2020-08-29 11:18:36 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 59]]
+  Rendered shelters/show.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 193ms (Views: 182.6ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.3ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 17:18:36.798661"], ["updated_at", "2020-08-29 17:18:36.798661"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.3ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bougie Beasts"], ["address", "2244 Ruby Ave"], ["city", "Cedar Rapids"], ["state", "IA"], ["zip", "52227"], ["created_at", "2020-08-29 17:18:36.800532"], ["updated_at", "2020-08-29 17:18:36.800532"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mReview Create (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "https://www.aspca.org/sites/default/files/styles/latest_story_465x458/public/field/image/blog/blog_separation-anxiety_082720_thumb.jpg?itok=99rlR42z"], ["shelter_id", 60], ["created_at", "2020-08-29 17:18:36.813787"], ["updated_at", "2020-08-29 17:18:36.813787"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Okay"], ["rating", "3"], ["content", "It was not the worst"], ["shelter_id", 60], ["created_at", "2020-08-29 17:18:36.816665"], ["updated_at", "2020-08-29 17:18:36.816665"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pretty bad"], ["rating", "1"], ["content", "I do not think I will be back"], ["shelter_id", 61], ["created_at", "2020-08-29 17:18:36.818628"], ["updated_at", "2020-08-29 17:18:36.818628"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/60" for 127.0.0.1 at 2020-08-29 11:18:36 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 60]]
+  Rendered shelters/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.0ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 17:30:15.998191"], ["updated_at", "2020-08-29 17:30:15.998191"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/62" for 127.0.0.1 at 2020-08-29 11:30:16 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 62]]
+  Rendered shelters/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 133ms (Views: 125.9ms | ActiveRecord: 2.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.6ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 19:50:53.342309"], ["updated_at", "2020-08-29 19:50:53.342309"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/63" for 127.0.0.1 at 2020-08-29 13:50:53 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"63"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 63]]
+  Rendered shelters/show.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 505ms (Views: 486.1ms | ActiveRecord: 3.6ms)
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.1ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 19:54:21.084600"], ["updated_at", "2020-08-29 19:54:21.084600"]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/64" for 127.0.0.1 at 2020-08-29 13:54:21 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  Rendered shelters/show.html.erb within layouts/application (64.7ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.1ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 19:55:09.531604"], ["updated_at", "2020-08-29 19:55:09.531604"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/65" for 127.0.0.1 at 2020-08-29 13:55:09 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 65]]
+  Rendered shelters/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 178ms (Views: 167.5ms | ActiveRecord: 4.6ms)
+Started GET "/shelters/65/reviews/new" for 127.0.0.1 at 2020-08-29 13:55:09 -0600
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 3.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.1ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 19:56:11.266913"], ["updated_at", "2020-08-29 19:56:11.266913"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/66" for 127.0.0.1 at 2020-08-29 13:56:11 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 66]]
+  Rendered shelters/show.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 286ms (Views: 275.6ms | ActiveRecord: 3.9ms)
+Started GET "/shelters/66/reviews/new" for 127.0.0.1 at 2020-08-29 13:56:11 -0600
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 16ms (ActiveRecord: 13.3ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (10.7ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 19:56:48.788891"], ["updated_at", "2020-08-29 19:56:48.788891"]]
+  [1m[35m (1.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/67" for 127.0.0.1 at 2020-08-29 13:56:48 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mShelter Load (0.9ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 67]]
+  Rendered shelters/show.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 355ms (Views: 323.3ms | ActiveRecord: 8.0ms)
+Started GET "/shelters/67/reviews/new" for 127.0.0.1 at 2020-08-29 13:56:49 -0600
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"new"}
+Completed 500 Internal Server Error in 235769ms (ActiveRecord: 0.0ms)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.8ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:01:00.374546"], ["updated_at", "2020-08-29 20:01:00.374546"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/68" for 127.0.0.1 at 2020-08-29 14:01:00 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 68]]
+  Rendered shelters/show.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 348ms (Views: 332.6ms | ActiveRecord: 5.1ms)
+Started GET "/shelters/68/reviews/new" for 127.0.0.1 at 2020-08-29 14:01:00 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"68"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 88ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/68/reviews" for 127.0.0.1 at 2020-08-29 14:01:00 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"68"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (8.6ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 68], ["created_at", "2020-08-29 20:01:00.923350"], ["updated_at", "2020-08-29 20:01:00.923350"]]
+  [1m[35m (2.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/68/reviews
+Completed 302 Found in 59ms (ActiveRecord: 16.8ms)
+Started GET "/shelters/68/reviews" for 127.0.0.1 at 2020-08-29 14:01:00 -0600
+Processing by Shelters::ReviewsController#index as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mShelter Load (1.7ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering shelters/reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 68]]
+  Rendered shelters/reviews/index.html.erb within layouts/application (96.0ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 2.8ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (2.4ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Denver Dumb Friends League"], ["created_at", "2020-08-29 20:05:38.381097"], ["updated_at", "2020-08-29 20:05:38.381097"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPet Create (2.4ms)[0m  [1m[32mINSERT INTO "pets" ("name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Eureka"], ["approximate_age", "12"], ["sex", "F"], ["shelter_id", 69], ["created_at", "2020-08-29 20:05:38.432330"], ["updated_at", "2020-08-29 20:05:38.432330"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.0ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Denver Dumb Friends League"], ["created_at", "2020-08-29 20:05:38.562115"], ["updated_at", "2020-08-29 20:05:38.562115"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPet Create (0.5ms)[0m  [1m[32mINSERT INTO "pets" ("name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Eureka"], ["approximate_age", "12"], ["sex", "F"], ["shelter_id", 70], ["created_at", "2020-08-29 20:05:38.569206"], ["updated_at", "2020-08-29 20:05:38.569206"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tarqui"], ["approximate_age", "2"], ["sex", "M"], ["shelter_id", 70], ["created_at", "2020-08-29 20:05:38.571990"], ["updated_at", "2020-08-29 20:05:38.571990"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pets" for 127.0.0.1 at 2020-08-29 14:05:38 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[36mCACHE Shelter Load (0.0ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  Rendered pets/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 371ms (Views: 363.4ms | ActiveRecord: 1.2ms)
+Started PATCH "/favorites/2" for 127.0.0.1 at 2020-08-29 14:05:38 -0600
+Processing by FavoritesController#update as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (55.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.6ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.049623"], ["updated_at", "2020-08-29 20:05:39.049623"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.0ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bougie Beasts"], ["address", "2244 Ruby Ave"], ["city", "Cedar Rapids"], ["state", "IA"], ["zip", "52227"], ["created_at", "2020-08-29 20:05:39.053537"], ["updated_at", "2020-08-29 20:05:39.053537"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.6ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Aurora's Animals"], ["address", "1836 Emerald St."], ["city", "Phoenix"], ["state", "AZ"], ["zip", "85005"], ["created_at", "2020-08-29 20:05:39.057178"], ["updated_at", "2020-08-29 20:05:39.057178"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (1.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mPet Create (2.4ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "TBD"], ["name", "Drax"], ["approximate_age", "102"], ["sex", "M"], ["shelter_id", 71], ["created_at", "2020-08-29 20:05:39.066699"], ["updated_at", "2020-08-29 20:05:39.066699"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[36mPet Create (1.0ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "ETA"], ["name", "Charlie"], ["approximate_age", "80"], ["sex", "F"], ["shelter_id", 72], ["created_at", "2020-08-29 20:05:39.073332"], ["updated_at", "2020-08-29 20:05:39.073332"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[36mPet Create (0.5ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "BYOB"], ["name", "Sparkles"], ["approximate_age", "7"], ["sex", "F"], ["shelter_id", 73], ["created_at", "2020-08-29 20:05:39.078957"], ["updated_at", "2020-08-29 20:05:39.078957"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pets" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  Rendered pets/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.3ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.143615"], ["updated_at", "2020-08-29 20:05:39.143615"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/74/pets" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by Shelters::PetsController#index as HTML
+  Parameters: {"id"=>"74"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.6ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.155179"], ["updated_at", "2020-08-29 20:05:39.155179"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.6ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bougie Beasts"], ["address", "2244 Ruby Ave"], ["city", "Cedar Rapids"], ["state", "IA"], ["zip", "52227"], ["created_at", "2020-08-29 20:05:39.158603"], ["updated_at", "2020-08-29 20:05:39.158603"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mPet Create (2.4ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "TBD"], ["name", "Drax"], ["approximate_age", "102"], ["sex", "M"], ["shelter_id", 75], ["created_at", "2020-08-29 20:05:39.165625"], ["updated_at", "2020-08-29 20:05:39.165625"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mPet Create (0.7ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "ETA"], ["name", "Charlie"], ["approximate_age", "80"], ["sex", "F"], ["shelter_id", 75], ["created_at", "2020-08-29 20:05:39.173247"], ["updated_at", "2020-08-29 20:05:39.173247"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mPet Create (0.6ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "BYOB"], ["name", "Sparkles"], ["approximate_age", "9999999"], ["sex", "F"], ["shelter_id", 76], ["created_at", "2020-08-29 20:05:39.177487"], ["updated_at", "2020-08-29 20:05:39.177487"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/75/pets" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by Shelters::PetsController#index as HTML
+  Parameters: {"id"=>"75"}
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.5ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.184827"], ["updated_at", "2020-08-29 20:05:39.184827"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[36mPet Create (0.6ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "created_at", "updated_at", "description", "adoption_status") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["image", "TBD"], ["name", "Drax"], ["approximate_age", "102"], ["sex", "M"], ["shelter_id", 77], ["created_at", "2020-08-29 20:05:39.190108"], ["updated_at", "2020-08-29 20:05:39.190108"], ["description", "Drax is a dragon."], ["adoption_status", "pending"]]
+  [1m[35m (1.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/pets/10" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.5ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.221812"], ["updated_at", "2020-08-29 20:05:39.221812"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.4ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bougie Beasts"], ["address", "2244 Ruby Ave"], ["city", "Cedar Rapids"], ["state", "IA"], ["zip", "52227"], ["created_at", "2020-08-29 20:05:39.223997"], ["updated_at", "2020-08-29 20:05:39.223997"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.3ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Aurora's Animals"], ["address", "1836 Emerald St."], ["city", "Phoenix"], ["state", "AZ"], ["zip", "85005"], ["created_at", "2020-08-29 20:05:39.227053"], ["updated_at", "2020-08-29 20:05:39.227053"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mReview Create (1.7ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 78], ["created_at", "2020-08-29 20:05:39.255965"], ["updated_at", "2020-08-29 20:05:39.255965"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[36mReview Create (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Okay"], ["rating", "3"], ["content", "It was not the worst"], ["image", "ETA"], ["shelter_id", 79], ["created_at", "2020-08-29 20:05:39.261724"], ["updated_at", "2020-08-29 20:05:39.261724"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[36mReview Create (1.1ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Pretty bad"], ["rating", "1"], ["content", "I do not think I will be back"], ["image", "BYOB"], ["shelter_id", 80], ["created_at", "2020-08-29 20:05:39.268521"], ["updated_at", "2020-08-29 20:05:39.268521"]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/reviews" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mShelter Load (0.8ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.6ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Desitin"], ["state", "RL"], ["zip", "32541"], ["created_at", "2020-08-29 20:05:39.329474"], ["updated_at", "2020-08-29 20:05:39.329474"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/81" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 81]]
+  Rendered shelters/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 13ms (Views: 7.2ms | ActiveRecord: 0.7ms)
+Started GET "/shelters/81/edit" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#edit as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  Rendering shelters/edit.html.erb within layouts/application
+  Rendered shelters/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+Started PATCH "/shelters/81" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Dragon's Dream", "address"=>"1664 Diamond Lane", "city"=>"Destin", "state"=>"FL", "zip"=>"32540", "commit"=>"Update Shelter", "id"=>"81"}
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Update (2.3ms)[0m  [1m[33mUPDATE "shelters" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "shelters"."id" = $7[0m  [["name", "The Dragon's Dream"], ["address", "1664 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["updated_at", "2020-08-29 20:05:39.387868"], ["id", 81]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/81
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+Started GET "/shelters/81" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 81]]
+  Rendered shelters/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.8ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.417667"], ["updated_at", "2020-08-29 20:05:39.417667"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.3ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bougie Beasts"], ["address", "2244 Ruby Ave"], ["city", "Cedar Rapids"], ["state", "IA"], ["zip", "52227"], ["created_at", "2020-08-29 20:05:39.420701"], ["updated_at", "2020-08-29 20:05:39.420701"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.4ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Aurora's Animals"], ["address", "1836 Emerald St."], ["city", "Phoenix"], ["state", "AZ"], ["zip", "85005"], ["created_at", "2020-08-29 20:05:39.422395"], ["updated_at", "2020-08-29 20:05:39.422395"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#index as HTML
+  Rendering shelters/index.html.erb within layouts/application
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT "shelters".* FROM "shelters"[0m
+  Rendered shelters/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.6ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.467478"], ["updated_at", "2020-08-29 20:05:39.467478"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/85" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"85"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 85]]
+  Rendered shelters/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.8ms)
+Started GET "/shelters/85/reviews/new" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"85"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/85/reviews" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"85"}
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (1.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (1.2ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 85], ["created_at", "2020-08-29 20:05:39.519351"], ["updated_at", "2020-08-29 20:05:39.519351"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/85/reviews
+Completed 302 Found in 8ms (ActiveRecord: 2.9ms)
+Started GET "/shelters/85/reviews" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/shelters" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#index as HTML
+  Rendering shelters/index.html.erb within layouts/application
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT "shelters".* FROM "shelters"[0m
+  Rendered shelters/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+Started GET "/shelters/new" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#new as HTML
+  Rendering shelters/new.html.erb within layouts/application
+  Rendered shelters/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started POST "/shelters" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Dragon's Dream", "address"=>"1554 Diamond Lane", "city"=>"Destin", "state"=>"FL", "zip"=>"32540", "commit"=>"Create Shelter"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.4ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.562930"], ["updated_at", "2020-08-29 20:05:39.562930"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+Started GET "/shelters" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#index as HTML
+  Rendering shelters/index.html.erb within layouts/application
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT "shelters".* FROM "shelters"[0m
+  Rendered shelters/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.0ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.578741"], ["updated_at", "2020-08-29 20:05:39.578741"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/87" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 87], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 87]]
+  Rendered shelters/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.8ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:39.606413"], ["updated_at", "2020-08-29 20:05:39.606413"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.8ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bougie Beasts"], ["address", "2244 Ruby Ave"], ["city", "Cedar Rapids"], ["state", "IA"], ["zip", "52227"], ["created_at", "2020-08-29 20:05:39.610818"], ["updated_at", "2020-08-29 20:05:39.610818"]]
+  [1m[35m (3.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  [1m[36mReview Create (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "https://www.aspca.org/sites/default/files/styles/latest_story_465x458/public/field/image/blog/blog_separation-anxiety_082720_thumb.jpg?itok=99rlR42z"], ["shelter_id", 88], ["created_at", "2020-08-29 20:05:39.622991"], ["updated_at", "2020-08-29 20:05:39.622991"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Okay"], ["rating", "3"], ["content", "It was not the worst"], ["shelter_id", 88], ["created_at", "2020-08-29 20:05:39.628314"], ["updated_at", "2020-08-29 20:05:39.628314"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 89], ["LIMIT", 1]]
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pretty bad"], ["rating", "1"], ["content", "I do not think I will be back"], ["shelter_id", 89], ["created_at", "2020-08-29 20:05:39.631167"], ["updated_at", "2020-08-29 20:05:39.631167"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/88" for 127.0.0.1 at 2020-08-29 14:05:39 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"88"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 88]]
+  Rendered shelters/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.3ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:05:47.900211"], ["updated_at", "2020-08-29 20:05:47.900211"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/90" for 127.0.0.1 at 2020-08-29 14:05:47 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"90"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 90]]
+  Rendered shelters/show.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 295ms (Views: 284.2ms | ActiveRecord: 4.1ms)
+Started GET "/shelters/90/reviews/new" for 127.0.0.1 at 2020-08-29 14:05:48 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"90"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/90/reviews" for 127.0.0.1 at 2020-08-29 14:05:48 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"90"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (2.1ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 90], ["created_at", "2020-08-29 20:05:48.323115"], ["updated_at", "2020-08-29 20:05:48.323115"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/90/reviews
+Completed 302 Found in 30ms (ActiveRecord: 7.2ms)
+Started GET "/shelters/90/reviews" for 127.0.0.1 at 2020-08-29 14:05:48 -0600
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.2ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:07:15.235808"], ["updated_at", "2020-08-29 20:07:15.235808"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/91" for 127.0.0.1 at 2020-08-29 14:07:15 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"91"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 91]]
+  Rendered shelters/show.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 326ms (Views: 296.1ms | ActiveRecord: 19.6ms)
+Started GET "/shelters/91/reviews/new" for 127.0.0.1 at 2020-08-29 14:07:15 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"91"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/91/reviews" for 127.0.0.1 at 2020-08-29 14:07:15 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"91"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 91], ["created_at", "2020-08-29 20:07:15.741445"], ["updated_at", "2020-08-29 20:07:15.741445"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/91/reviews
+Completed 302 Found in 33ms (ActiveRecord: 8.5ms)
+Started GET "/shelters/91/reviews" for 127.0.0.1 at 2020-08-29 14:07:15 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"91"}
+  [1m[36mShelter Load (2.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 91]]
+  Rendered shelters/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (15.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (13.4ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:08:54.065790"], ["updated_at", "2020-08-29 20:08:54.065790"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/92" for 127.0.0.1 at 2020-08-29 14:08:54 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"92"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 92]]
+  Rendered shelters/show.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 336ms (Views: 321.8ms | ActiveRecord: 5.0ms)
+Started GET "/shelters/92/reviews/new" for 127.0.0.1 at 2020-08-29 14:08:54 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"92"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/92/reviews" for 127.0.0.1 at 2020-08-29 14:08:54 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"92"}
+  [1m[36mShelter Load (1.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (2.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (3.0ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 92], ["created_at", "2020-08-29 20:08:54.592663"], ["updated_at", "2020-08-29 20:08:54.592663"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/92/reviews
+Completed 302 Found in 46ms (ActiveRecord: 11.2ms)
+Started GET "/shelters/92/reviews" for 127.0.0.1 at 2020-08-29 14:08:54 -0600
+Processing by Shelters::ReviewsController#index as HTML
+  Parameters: {"id"=>"92"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  Rendering shelters/reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 92]]
+  Rendered shelters/reviews/index.html.erb within layouts/application (83.8ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.0ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:09:26.945777"], ["updated_at", "2020-08-29 20:09:26.945777"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/93" for 127.0.0.1 at 2020-08-29 14:09:26 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"93"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 93]]
+  Rendered shelters/show.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 420ms (Views: 408.4ms | ActiveRecord: 3.8ms)
+Started GET "/shelters/93/reviews/new" for 127.0.0.1 at 2020-08-29 14:09:27 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"93"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/93/reviews" for 127.0.0.1 at 2020-08-29 14:09:27 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"93"}
+  [1m[36mShelter Load (12.8ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (1.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (4.8ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 93], ["created_at", "2020-08-29 20:09:27.555245"], ["updated_at", "2020-08-29 20:09:27.555245"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/93/reviews
+Completed 302 Found in 56ms (ActiveRecord: 24.5ms)
+Started GET "/shelters/93/reviews" for 127.0.0.1 at 2020-08-29 14:09:27 -0600
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.2ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:10:56.137995"], ["updated_at", "2020-08-29 20:10:56.137995"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/94" for 127.0.0.1 at 2020-08-29 14:10:56 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mShelter Load (0.7ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 94]]
+  Rendered shelters/show.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 349ms (Views: 321.9ms | ActiveRecord: 11.6ms)
+Started GET "/shelters/94/reviews/new" for 127.0.0.1 at 2020-08-29 14:10:56 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"94"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/94/reviews" for 127.0.0.1 at 2020-08-29 14:10:56 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"94"}
+  [1m[36mShelter Load (1.7ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (4.0ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 94], ["created_at", "2020-08-29 20:10:56.647379"], ["updated_at", "2020-08-29 20:10:56.647379"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/94/reviews
+Completed 302 Found in 48ms (ActiveRecord: 16.0ms)
+Started GET "/shelters/94/reviews" for 127.0.0.1 at 2020-08-29 14:10:56 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 94]]
+  Rendered shelters/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (2.2ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:11:38.139592"], ["updated_at", "2020-08-29 20:11:38.139592"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/95" for 127.0.0.1 at 2020-08-29 14:11:38 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mShelter Load (4.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 95]]
+  Rendered shelters/show.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 352ms (Views: 332.2ms | ActiveRecord: 9.8ms)
+Started GET "/shelters/95/reviews/new" for 127.0.0.1 at 2020-08-29 14:11:38 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"95"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/95/reviews" for 127.0.0.1 at 2020-08-29 14:11:38 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"95"}
+  [1m[36mShelter Load (1.1ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (3.2ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 95], ["created_at", "2020-08-29 20:11:38.653674"], ["updated_at", "2020-08-29 20:11:38.653674"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/95
+Completed 302 Found in 36ms (ActiveRecord: 15.8ms)
+Started GET "/shelters/95" for 127.0.0.1 at 2020-08-29 14:11:38 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 95]]
+  Rendered shelters/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.5ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:14:42.092237"], ["updated_at", "2020-08-29 20:14:42.092237"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/96" for 127.0.0.1 at 2020-08-29 14:14:42 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mShelter Load (1.9ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 96]]
+  Rendered shelters/show.html.erb within layouts/application (156649.1ms)
+Completed 500 Internal Server Error in 156676ms (ActiveRecord: 5.8ms)
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (2.7ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:17:28.313153"], ["updated_at", "2020-08-29 20:17:28.313153"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/97" for 127.0.0.1 at 2020-08-29 14:17:28 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"97"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 97], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 97]]
+  Rendered shelters/show.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 389ms (Views: 368.8ms | ActiveRecord: 9.3ms)
+Started GET "/shelters/97/reviews/new" for 127.0.0.1 at 2020-08-29 14:17:28 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"97"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/97/reviews" for 127.0.0.1 at 2020-08-29 14:17:28 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"97"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 97], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (1.6ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 97], ["created_at", "2020-08-29 20:17:28.846541"], ["updated_at", "2020-08-29 20:17:28.846541"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/97
+Completed 302 Found in 36ms (ActiveRecord: 5.2ms)
+Started GET "/shelters/97" for 127.0.0.1 at 2020-08-29 14:17:28 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"97"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 97], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 97]]
+  Rendered shelters/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.1ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:18:41.328835"], ["updated_at", "2020-08-29 20:18:41.328835"]]
+  [1m[35m (1.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/98" for 127.0.0.1 at 2020-08-29 14:18:41 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"98"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 98], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (2.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 98]]
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" ORDER BY "reviews"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered shelters/show.html.erb within layouts/application (145339.2ms)
+Completed 500 Internal Server Error in 145354ms (ActiveRecord: 23.7ms)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (4.9ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:21:20.611054"], ["updated_at", "2020-08-29 20:21:20.611054"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/99" for 127.0.0.1 at 2020-08-29 14:21:20 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 99], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  Rendered shelters/show.html.erb within layouts/application (67269.3ms)
+Completed 500 Internal Server Error in 67302ms (ActiveRecord: 0.9ms)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (2.7ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:22:54.172141"], ["updated_at", "2020-08-29 20:22:54.172141"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/100" for 127.0.0.1 at 2020-08-29 14:22:54 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mShelter Load (1.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 100]]
+  Rendered shelters/show.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 385ms (Views: 371.7ms | ActiveRecord: 5.0ms)
+Started GET "/shelters/100/reviews/new" for 127.0.0.1 at 2020-08-29 14:22:54 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"100"}
+Completed 500 Internal Server Error in 109030ms (ActiveRecord: 0.0ms)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.8ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:24:58.924177"], ["updated_at", "2020-08-29 20:24:58.924177"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/101" for 127.0.0.1 at 2020-08-29 14:24:58 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 101]]
+  Rendered shelters/show.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 416ms (Views: 396.0ms | ActiveRecord: 4.1ms)
+Started GET "/shelters/101/reviews/new" for 127.0.0.1 at 2020-08-29 14:24:59 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"101"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/101/reviews" for 127.0.0.1 at 2020-08-29 14:24:59 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"101"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+Completed 500 Internal Server Error in 337731ms (ActiveRecord: 0.5ms)
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.7ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:30:46.449184"], ["updated_at", "2020-08-29 20:30:46.449184"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/102" for 127.0.0.1 at 2020-08-29 14:30:46 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 102], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 102]]
+  Rendered shelters/show.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 425ms (Views: 409.6ms | ActiveRecord: 7.0ms)
+Started GET "/shelters/102/reviews/new" for 127.0.0.1 at 2020-08-29 14:30:46 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"102"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/102/reviews" for 127.0.0.1 at 2020-08-29 14:30:47 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"102"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 102], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (2.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 102], ["created_at", "2020-08-29 20:30:47.053358"], ["updated_at", "2020-08-29 20:30:47.053358"]]
+  [1m[35m (2.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 102], ["created_at", "2020-08-29 20:30:47.064210"], ["updated_at", "2020-08-29 20:30:47.064210"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/102
+Completed 302 Found in 37ms (ActiveRecord: 10.4ms)
+Started GET "/shelters/102" for 127.0.0.1 at 2020-08-29 14:30:47 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 102], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 102]]
+  Rendered shelters/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.9ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:31:17.323153"], ["updated_at", "2020-08-29 20:31:17.323153"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/103" for 127.0.0.1 at 2020-08-29 14:31:17 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 103]]
+  Rendered shelters/show.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 215ms (Views: 199.0ms | ActiveRecord: 9.2ms)
+Started GET "/shelters/103/reviews/new" for 127.0.0.1 at 2020-08-29 14:31:17 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"103"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/103/reviews" for 127.0.0.1 at 2020-08-29 14:31:17 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"103"}
+  [1m[36mShelter Load (6.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (3.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 103], ["created_at", "2020-08-29 20:31:17.628665"], ["updated_at", "2020-08-29 20:31:17.628665"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 103], ["created_at", "2020-08-29 20:31:17.636321"], ["updated_at", "2020-08-29 20:31:17.636321"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/103
+Completed 302 Found in 51ms (ActiveRecord: 17.5ms)
+Started GET "/shelters/103" for 127.0.0.1 at 2020-08-29 14:31:17 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 103]]
+  Rendered shelters/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (2.5ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:32:15.142116"], ["updated_at", "2020-08-29 20:32:15.142116"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/104" for 127.0.0.1 at 2020-08-29 14:32:15 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"104"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 104], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 104]]
+  Rendered shelters/show.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 225ms (Views: 210.1ms | ActiveRecord: 6.2ms)
+Started GET "/shelters/104/reviews/new" for 127.0.0.1 at 2020-08-29 14:32:15 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"104"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/104/reviews" for 127.0.0.1 at 2020-08-29 14:32:15 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"TBD", "commit"=>"Create Review", "id"=>"104"}
+  [1m[36mShelter Load (27.8ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 104], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 104], ["created_at", "2020-08-29 20:32:15.480320"], ["updated_at", "2020-08-29 20:32:15.480320"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "TBD"], ["shelter_id", 104], ["created_at", "2020-08-29 20:32:15.484384"], ["updated_at", "2020-08-29 20:32:15.484384"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/104
+Completed 302 Found in 56ms (ActiveRecord: 35.1ms)
+Started GET "/shelters/104" for 127.0.0.1 at 2020-08-29 14:32:15 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"104"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 104], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 104]]
+  Rendered shelters/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.7ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:35:05.788788"], ["updated_at", "2020-08-29 20:35:05.788788"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/105" for 127.0.0.1 at 2020-08-29 14:35:05 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 105]]
+  Rendered shelters/show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 279ms (Views: 270.0ms | ActiveRecord: 3.2ms)
+Started GET "/shelters/105/reviews/new" for 127.0.0.1 at 2020-08-29 14:35:06 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"105"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/105/reviews" for 127.0.0.1 at 2020-08-29 14:35:06 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"https://s.abcnews.com/images/Health/200406_vod_orig_covid_pets_10_hpMain_16x9_992.jpg", "commit"=>"Create Review", "id"=>"105"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (1.1ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "https://s.abcnews.com/images/Health/200406_vod_orig_covid_pets_10_hpMain_16x9_992.jpg"], ["shelter_id", 105], ["created_at", "2020-08-29 20:35:06.191458"], ["updated_at", "2020-08-29 20:35:06.191458"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "https://s.abcnews.com/images/Health/200406_vod_orig_covid_pets_10_hpMain_16x9_992.jpg"], ["shelter_id", 105], ["created_at", "2020-08-29 20:35:06.195518"], ["updated_at", "2020-08-29 20:35:06.195518"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/105
+Completed 302 Found in 22ms (ActiveRecord: 6.0ms)
+Started GET "/shelters/105" for 127.0.0.1 at 2020-08-29 14:35:06 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 105]]
+  Rendered shelters/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.4ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:54:07.480568"], ["updated_at", "2020-08-29 20:54:07.480568"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/106" for 127.0.0.1 at 2020-08-29 14:54:07 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"106"}
+  [1m[36mShelter Load (0.7ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (2.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 106]]
+  Rendered shelters/show.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 372ms (Views: 355.2ms | ActiveRecord: 6.5ms)
+Started GET "/shelters/106/reviews/new" for 127.0.0.1 at 2020-08-29 14:54:07 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"106"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 133ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/106/reviews" for 127.0.0.1 at 2020-08-29 14:54:08 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"https://s.abcnews.com/images/Health/200406_vod_orig_covid_pets_10_hpMain_16x9_992.jpg", "commit"=>"Create Review", "id"=>"106"}
+  [1m[36mShelter Load (8.7ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (19.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (1.7ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "https://s.abcnews.com/images/Health/200406_vod_orig_covid_pets_10_hpMain_16x9_992.jpg"], ["shelter_id", 106], ["created_at", "2020-08-29 20:54:08.197468"], ["updated_at", "2020-08-29 20:54:08.197468"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/106
+Completed 302 Found in 99ms (ActiveRecord: 41.2ms)
+Started GET "/shelters/106" for 127.0.0.1 at 2020-08-29 14:54:08 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"106"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 106]]
+  Rendered shelters/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 2.1ms)
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.4ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:54:08.572973"], ["updated_at", "2020-08-29 20:54:08.572973"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/107" for 127.0.0.1 at 2020-08-29 14:54:08 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"107"}
+  [1m[36mShelter Load (2.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 107], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 107]]
+  Rendered shelters/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 3.6ms)
+Started GET "/shelters/107/reviews/new" for 127.0.0.1 at 2020-08-29 14:54:08 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"107"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/107/reviews" for 127.0.0.1 at 2020-08-29 14:54:08 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"https://s.abcnews.com/images/Health/200406_vod_orig_covid_pets_10_hpMain_16x9_992.jpg", "commit"=>"Create Review", "id"=>"107"}
+  [1m[36mShelter Load (0.9ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 107], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (4.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/107/review/new
+Completed 302 Found in 17ms (ActiveRecord: 5.5ms)
+Started GET "/shelters/107/review/new" for 127.0.0.1 at 2020-08-29 14:54:08 -0600
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (1.1ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:55:39.619203"], ["updated_at", "2020-08-29 20:55:39.619203"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/108" for 127.0.0.1 at 2020-08-29 14:55:39 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"108"}
+  [1m[36mShelter Load (11.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 108]]
+  Rendered shelters/show.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 464ms (Views: 429.9ms | ActiveRecord: 24.9ms)
+Started GET "/shelters/108/reviews/new" for 127.0.0.1 at 2020-08-29 14:55:40 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"108"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/108/reviews" for 127.0.0.1 at 2020-08-29 14:55:40 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"Very cool!", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"https://s.abcnews.com/images/Health/200406_vod_orig_covid_pets_10_hpMain_16x9_992.jpg", "commit"=>"Create Review", "id"=>"108"}
+  [1m[36mShelter Load (0.7ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mReview Create (8.7ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "rating", "content", "image", "shelter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Very cool!"], ["rating", "5"], ["content", "I rather liked the place!"], ["image", "https://s.abcnews.com/images/Health/200406_vod_orig_covid_pets_10_hpMain_16x9_992.jpg"], ["shelter_id", 108], ["created_at", "2020-08-29 20:55:40.247216"], ["updated_at", "2020-08-29 20:55:40.247216"]]
+  [1m[35m (2.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/108
+Completed 302 Found in 45ms (ActiveRecord: 18.1ms)
+Started GET "/shelters/108" for 127.0.0.1 at 2020-08-29 14:55:40 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"108"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 108]]
+  Rendered shelters/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mShelter Create (0.6ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Dragon's Dream"], ["address", "1554 Diamond Lane"], ["city", "Destin"], ["state", "FL"], ["zip", "32540"], ["created_at", "2020-08-29 20:55:40.531341"], ["updated_at", "2020-08-29 20:55:40.531341"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/shelters/109" for 127.0.0.1 at 2020-08-29 14:55:40 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"109"}
+  [1m[36mShelter Load (3.8ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 109], ["LIMIT", 1]]
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 109]]
+  Rendered shelters/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 4.2ms)
+Started GET "/shelters/109/reviews/new" for 127.0.0.1 at 2020-08-29 14:55:40 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"109"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+Started POST "/shelters/109/reviews" for 127.0.0.1 at 2020-08-29 14:55:40 -0600
+Processing by Shelters::ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"", "rating"=>"5", "content"=>"I rather liked the place!", "image"=>"https://s.abcnews.com/images/Health/200406_vod_orig_covid_pets_10_hpMain_16x9_992.jpg", "commit"=>"Create Review", "id"=>"109"}
+  [1m[36mShelter Load (0.5ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 109], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/shelters/109/reviews/new
+Completed 302 Found in 22ms (ActiveRecord: 0.9ms)
+Started GET "/shelters/109/reviews/new" for 127.0.0.1 at 2020-08-29 14:55:40 -0600
+Processing by Shelters::ReviewsController#new as HTML
+  Parameters: {"id"=>"109"}
+  Rendering shelters/reviews/new.html.erb within layouts/application
+  Rendered shelters/reviews/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m

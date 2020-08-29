@@ -1,18 +1,7 @@
-# User Story 2, Shelter Reviews
-#
-# As a visitor,
-# When I visit a shelter's show page,
-# I see a list of reviews for that shelter
-# Each review will have:
-# - title
-# - rating
-# - content
-# - an optional picture
-
 require 'rails_helper'
 
-RSpec.describe 'shelters index page', type: :feature do
-  it 'can see all shelters' do
+RSpec.describe 'reviews index page', type: :feature do
+  it 'can see all reviews' do
     shelter_1 = Shelter.create(name: "The Dragon's Dream",
                                address: '1554 Diamond Lane',
                                city: 'Destin',
@@ -63,4 +52,7 @@ RSpec.describe 'shelters index page', type: :feature do
     expect(page).to have_text(shelter_2.name)
     expect(page).to have_text(shelter_3.name)
   end
+
+
+  
 end

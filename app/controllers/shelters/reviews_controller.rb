@@ -10,11 +10,21 @@ class Shelters::ReviewsController < ApplicationController
 
   def create
     shelter = Shelter.find(params[:id])
-    if review_params.values.any?('') == false
-      shelter.reviews.create(review_params)
-      redirect_to "/shelters/#{params[:id]}/reviews"
+    review = shelter.reviews.new(review_params)
+    if review.save
+      redirect_to "/shelters/#{params[:id]}"
     else
-      redirect_to "/shelters/#{params[:id]}/review/new", danger: 'You need to fill in a title, rating, and content in order to submit a shelter review'
+      redirect_to "/shelters/#{params[:id]}/reviews/new", danger: 'You need to fill in a title, rating, and content in order to submit a shelter review'
+    end
+  end
+
+  def update
+    review = Review.find(params[:id])
+    review.update(review_params)
+    if review.save
+      redirect_to "/shelters/#{params[:id]}"
+    else
+      redirect_to "/shelters/#{params[:id]}/reviews/new", danger: 'You need to fill in a title, rating, and content in order to submit a shelter review'
     end
   end
 

@@ -1,17 +1,29 @@
-<a href="/">Home</a> || <a href="/shelters">Shelter Index</a> || <a href="/pets">Pet Index</a> || <a href="/reviews">Reviews Index</a> || <a href="/favorites">Favorites</a> 
+<a href="/">Home</a> || <a href="/shelters">Shelter Index</a> || <a href="/pets">Pet Index</a> || <a href="/reviews">Reviews Index</a> || <a href="/favorites">Favorites</a>
 </br></br> ||
 <a href="javascript:history.back()">Go Back</a> ||
 
-<h1><%= @shelter.name %></h1>
+<h2><%= @shelter.name %></h2>
 <p><%= @shelter.address %></p>
 <p><%= @shelter.city %></p>
 <p><%= @shelter.state %></p>
 <p><%= @shelter.zip %></p></br>
 
-<%= link_to "Pets At This Shelter", "/shelters/#{@shelter.id}/pets/" %> </br></br>
+<%= link_to "Pets at This Shelter", "/shelters/#{@shelter.id}/pets/" %> </br></br>
 
 <%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit" %> </br></br>
 
-<%= button_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %></br></br></br>
+<%= button_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %></br></br>
 
-<%= link_to "All Reviews of This Shelter", "/shelters/#{@shelter.id}/reviews/" %> </br></br>
+<h3>Reviews</h3>
+
+<%= link_to "Add New Review", "/shelters/#{@shelter.id}/reviews/new" %>
+
+<% @shelter.reviews.each do |review| %>
+
+  <h3> <%=  link_to review.title, "/shelters/#{@shelter.id}/reviews/#{review.id}" %>  </h3>
+
+  <p><%= review.rating %></p>
+  <p><%= review.content %></p>
+  <img src="<%= review.image %>" alt="<% "review_#{review.id}" %>">
+  <p><%= review.shelter_id %></p>
+<% end %>
