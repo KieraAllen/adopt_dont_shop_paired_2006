@@ -17,6 +17,11 @@ RSpec.describe Favorite do
                        approximate_age: '80',
                        sex: 'F',
                        shelter_id: @shelter_1.id)
+    @pet_3 = Pet.create(image: 'BYOB',
+                        name: 'Sparkles',
+                        approximate_age: '7',
+                        sex: 'F',
+                        shelter_id: @shelter_1.id)
   end
 
   subject { Favorite.new({@pet_1.id.to_s => 2, @pet_2.id.to_s => 3}) }
@@ -39,7 +44,7 @@ RSpec.describe Favorite do
 
   describe "#count_of" do
   it "returns the count of all pets in the favorites" do
-      @favorites = Favorite.new({})
+      favorites = Favorite.new({})
 
       expect(favorites.count_of(5)).to eq(0)
     end
@@ -47,8 +52,8 @@ RSpec.describe Favorite do
 
 
   it "adds a pet that hasn't been added yet" do
-    subject.add_pet('3')
+    subject.add_pet(@pet_3)
 
-    expect(subject.contents).to eq({'1' => 2, '2' => 3, '3' => 1})
+    expect(subject.contents).to eq({@pet_1.id.to_s => 2, @pet_2.id.to_s => 3, @pet_3.id.to_s => 1})
   end
 end
