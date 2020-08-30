@@ -4,7 +4,6 @@
     <title>Adopt Don't Shop Paired</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
@@ -17,6 +16,6 @@
     <% end %>
 
     <p>Favorites: <%= @favorites.total_count %> </p>
-
+  <%= yield %>
   </body>
 </html>
