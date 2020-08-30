@@ -1,7 +1,6 @@
 class SheltersController < ApplicationController
   def index
     @shelters = Shelter.all
-    @favorites = Favorite.new(session[:favorites])
   end
 
   def show

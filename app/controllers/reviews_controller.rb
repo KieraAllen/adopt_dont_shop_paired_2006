@@ -1,7 +1,6 @@
 class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
-    @favorites = Favorite.new(session[:favorites])
   end
 
   def show

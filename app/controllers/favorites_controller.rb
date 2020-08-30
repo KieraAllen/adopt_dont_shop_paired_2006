@@ -1,9 +1,9 @@
 class FavoritesController < ApplicationController
   include ActionView::Helpers::TextHelper
+  before_action :favorites
 
   def index
     @pets = Pet.all
-    @favorites = Favorite.new(session[:favorites])
   end
 
   def update
