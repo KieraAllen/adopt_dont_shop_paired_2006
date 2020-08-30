@@ -13,13 +13,13 @@ RSpec.describe "When a user adds pet to their favorites" do
                         approximate_age: '102',
                         sex: 'M',
                         shelter_id: shelter_1.id)
+
     visit "/pets/#{pet_1.id}"
 
-    within("#pet-#{pet_1.id}") do
-      click_button "Add Pet To Favorites"
-    end
+    click_button "Add Pet To Favorites"
 
-    expect(page).to have_content("You now have #{pluralize(quantity, 'copy')} of #{pet.name} in your Favorites.")
+
+    expect(page).to have_content("#{pet_1.name} has been added to your Favorites!")
   end
 
   it "the message correctly increments for multiple pets" do

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-08-30T15:10:44-06:00">2020-08-30T15:10:44-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-08-30T15:18:31-06:00">2020-08-30T15:18:31-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  91.6%
+  90.84%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.97
+         0.98
        </span>
     </span> hits/line
     )
@@ -44,10 +44,10 @@
 
   <div class="t-line-summary">
     <b>131</b> relevant lines,
-    <span class="green"><b>120</b> lines covered</span> and
-    <span class="red"><b>11</b> lines missed. </span>
+    <span class="green"><b>119</b> lines covered</span> and
+    <span class="red"><b>12</b> lines missed. </span>
     (<span class="green">
-  91.6%
+  90.84%
 </span>
 )
   </div>
@@ -99,7 +99,7 @@
             <td class="cell--number">15</td>
             <td class="cell--number">9</td>
             <td class="cell--number">6</td>
-            <td class="cell--number">0.60</td>
+            <td class="cell--number">0.67</td>
             
           </tr>
         
@@ -149,12 +149,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d25f2ce63915f2a8654d851e883fafe333be0abb" class="src_link" title="app/poros/favorite.rb">app/poros/favorite.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">88.24 %</td>
+            <td class="yellow strong cell--number t-file__coverage">82.35 %</td>
             <td class="cell--number">32</td>
             <td class="cell--number">17</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">1.12</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">1.18</td>
             
           </tr>
         
@@ -646,7 +646,7 @@
 
             
 
-            <code class="ruby">    flash[:notice] = &quot;You now have #{pluralize(favorites.quantity_of(pet), &#39;copy&#39;)} of #{pet.name} in your Favorites.&quot;</code>
+            <code class="ruby">    flash[:notice] = &quot;#{pet.name} has been added to your Favorites!&quot;</code>
           </li>
         </div>
       
@@ -668,7 +668,7 @@
 
             
 
-            <code class="ruby">    request.referrer</code>
+            <code class="ruby">    redirect_to &quot;/pets/#{pet.id}&quot;</code>
           </li>
         </div>
       
@@ -869,8 +869,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="7">
+            <span class="hits">2</span>
             
 
             
@@ -1431,7 +1431,7 @@
     <h3>app/poros/favorite.rb</h3>
     <h4>
       <span class="yellow">
-  88.24%
+  82.35%
 </span>
 
       lines covered
@@ -1441,8 +1441,8 @@
 
     <div class="t-line-summary">
       <b>17</b> relevant lines.
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>14</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
 
     
@@ -1497,8 +1497,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="5">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="4" data-linenumber="5">
+            <span class="hits">4</span>
             
 
             
@@ -1508,8 +1508,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="6">
-            
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
             
 
             
@@ -1585,8 +1585,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="13">
+            <span class="hits">2</span>
             
 
             
@@ -1739,8 +1739,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="27">
+            
             
 
             
@@ -1750,8 +1750,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="28">
+            
             
 
             

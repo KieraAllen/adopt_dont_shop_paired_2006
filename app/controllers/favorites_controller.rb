@@ -12,9 +12,9 @@ class FavoritesController < ApplicationController
     favorite.add_pet(pet)
 
     session[:favorites] = @favorites.contents
-    flash[:notice] = "You now have #{pluralize(favorites.quantity_of(pet), 'copy')} of #{pet.name} in your Favorites."
+    flash[:notice] = "#{pet.name} has been added to your Favorites!"
 
-    request.referrer
+    redirect_to "/pets/#{pet.id}"
 
   end
 
