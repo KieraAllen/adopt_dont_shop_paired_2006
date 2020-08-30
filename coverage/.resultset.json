@@ -252,6 +252,7 @@
           1,
           null,
           1,
+          null,
           1,
           1,
           1,
@@ -271,7 +272,10 @@
           1,
           1,
           null,
+          null,
+          null,
           1,
+          null,
           1,
           1,
           null
@@ -298,31 +302,26 @@
           null
         ]
       },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/models/review.rb": {
+      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/models/pet.rb": {
         "lines": [
-          1,
           1,
           1,
           null
         ]
       },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/controllers/shelters_controller.rb": {
+      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/controllers/pets_controller.rb": {
         "lines": [
           1,
           1,
+          1,
+          1,
+          null,
+          null,
+          1,
           0,
           null,
           null,
           1,
-          2,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
           null,
           1,
           0,
@@ -333,10 +332,6 @@
           0,
           0,
           null,
-          null,
-          1,
-          0,
-          0,
           null,
           null,
           1,
@@ -363,10 +358,26 @@
           null
         ]
       },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/controllers/shelters/reviews_controller.rb": {
+      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/poros/favorite.rb": {
         "lines": [
           1,
           1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
           0,
           0,
           null,
@@ -378,43 +389,6 @@
           1,
           0,
           0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
           null,
           null,
           null,
@@ -422,6 +396,6 @@
         ]
       }
     },
-    "timestamp": 1598745655
+    "timestamp": 1598753287
   }
 }

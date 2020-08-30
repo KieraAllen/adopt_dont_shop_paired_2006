@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   delete '/shelters/:id', to: 'shelters#destroy'
 
   get '/pets', to: 'pets#index'
+
   get '/shelters/:id/pets', to: 'shelters/pets#index'
   get '/pets/:id/edit', to: 'shelters/pets#edit'
   get '/pets/:id', to: 'pets#show'
@@ -29,7 +30,10 @@ Rails.application.routes.draw do
   get '/shelters/:id/reviews/:id', to: 'reviews#show'
   delete '/reviews/:id', to: 'shelters/reviews#destroy'
 
+
+
   patch '/favorites/:id', to: 'favorites#update'
+  # patch '/favorites/:pet_id', to: 'favorites#update'
   resources :packages, only: [:create]
   delete '/favorites', to: 'favorites#destroy'
 end

@@ -11,6 +11,6 @@
     <p><%= pet.approximate_age %></p>
     <p><%= pet.sex %></p>
     <p><%= pet.shelter.name %></p>
-    <%= button_to "Add Pet To Favorites", "/favorites/#{pet.id}", method: :patch %>
+    <p><%= button_to "Add Pet to Favorites," "/favorites/#{pet.id}", method: :patch %></p>
   </section>
 <% end %>

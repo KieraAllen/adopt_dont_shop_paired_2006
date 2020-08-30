@@ -10,17 +10,20 @@
   </head>
 
 
-<%# this should eventually work without the 'if' block %>
-<% if @favorites %>
-  <p>Favorites: <%= @favorites.total_count %> </p>
-<% end %>
+
+
+
+
 
 
   <body>
-    <% flash.each do |name, message| %>
-      <div class='alert alert-<%= name %>'></div>
-        <%= message %>
-    <% end%>
-    <%= yield %>
+    <% flash.each do |type, message| %>
+        <section class=<%= type %>>
+          <p><%= message %></p>
+        </section>
+    <% end %>
+
+    <p>Favorites: <%= @favorites.total_count %> </p>
+
   </body>
 </html>

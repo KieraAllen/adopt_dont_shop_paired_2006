@@ -6,13 +6,16 @@ class FavoritesController < ApplicationController
   end
 
   def update
-    # @favorites = 
     pet = Pet.find(params[:id])
-    @favorites.add_pet(pet.id)
+    favorite = Favorite.new(session[:favorites])
+    favorite.add_pet(pet)
+
     session[:favorites] = @favorites.contents
-    quantity = @favorites.count_of(pet.id)
-    flash[:notice] = "You now have #{pluralize(quantity, 'copy')} of #{pet.name} in your Favorites."
+    flash[:notice] = "You now have #{pluralize(favorites.quantity_of(pet), 'copy')} of #{pet.name} in your Favorites."
+    
     request.referrer
+
+
 
   end
 
