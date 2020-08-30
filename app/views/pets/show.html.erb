@@ -9,7 +9,7 @@
 
   <a href="/pets/<%= @pet.id %>/edit">Update Pet</a><br/><br/>
 
-  <%= button_to "Add Pet To Favorites", "/favorites/#{@pet.id}", method: :patch %><br/><br/>
+  <%= button_to "Add or Remove Pet from Favorites", "/favorites/#{@pet.id}", method: :patch %><br/><br/>
 
   <%= button_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %></br></br></br>
 </section>

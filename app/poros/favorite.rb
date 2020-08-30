@@ -14,6 +14,7 @@ class Favorite
   end
 
   def add_pet(pet)
+    
     pet_id_str = pet.id.to_s
     @contents[pet_id_str] ||= 0
     @contents[pet_id_str] += 1

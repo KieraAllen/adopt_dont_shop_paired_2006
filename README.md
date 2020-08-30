@@ -191,7 +191,7 @@ I can see this favorite indicator from any page in the application
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 9, Favorite Creation
 
@@ -230,7 +230,7 @@ I am taken to the favorites index page
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 12, Can't Favorite a Pet More Than Once
 
