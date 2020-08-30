@@ -21,7 +21,7 @@ RSpec.describe "When a user adds pet to their favorites" do
     expect(page).to have_content("#{pet_1.name} has been added to your Favorites!")
   end
 
-  it "displays the total number of pets in the favorites" do
+  it "doesn't allow you to add pet to favorites twice" do
     shelter_1 = Shelter.create(name: "The Dragon's Dream",
                                address: '1554 Diamond Lane',
                                city: 'Destin',

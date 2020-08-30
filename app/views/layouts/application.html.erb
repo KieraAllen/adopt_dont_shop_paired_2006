@@ -15,7 +15,7 @@
         </section>
     <% end %>
 
-    <p>Favorites: <%= @favorites.total_count %> </p>
+    <p>||<a href="javascript:history.back()">Go Back</a> || <a href="/">Home</a> || <a href="/shelters">Shelter Index</a> || <a href="/pets">Pet Index</a> ||<a href="/reviews">Reviews Index</a> || <a href="/favorites">Favorites:</a> <%= @favorites.total_count %> </p>
   <%= yield %>
   </body>
 </html>

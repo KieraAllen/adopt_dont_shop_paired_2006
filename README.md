@@ -206,7 +206,7 @@ The favorite indicator in the nav bar has incremented by one
 
 
 ```
-[ ] done
+[x] done
 
 User Story 10, Favorite Index Page
 
@@ -220,7 +220,7 @@ Each pet in my favorites shows the following information:
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 11, Favorite Indicator links to Index Page
 
