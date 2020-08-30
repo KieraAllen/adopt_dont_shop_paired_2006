@@ -23641,3 +23641,21 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-08-29 20:35:46 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_count' for nil:NilClass):
+    16:         </section>
+    17:     <% end %>
+    18: 
+    19:     <p>Favorites: <%= @favorites.total_count %> </p>
+    20: 
+    21:   </body>
+    22: </html>
+  
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__2564577271486436278_70188608461560'

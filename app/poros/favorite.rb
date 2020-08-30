@@ -14,7 +14,8 @@ class Favorite
     @contents.values.sum
   end
 
-  def add_pet(id)
+  def add_pet(pet)
+    # binding.pry
     pet_id_str = pet.id.to_s
     @contents[pet_id_str] ||= 0
     @contents[pet_id_str] += 1

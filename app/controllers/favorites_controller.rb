@@ -12,10 +12,8 @@ class FavoritesController < ApplicationController
 
     session[:favorites] = @favorites.contents
     flash[:notice] = "You now have #{pluralize(favorites.quantity_of(pet), 'copy')} of #{pet.name} in your Favorites."
-    
+
     request.referrer
-
-
 
   end
 
