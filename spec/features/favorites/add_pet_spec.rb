@@ -13,7 +13,7 @@ RSpec.describe "When a user adds pet to their favorites" do
                         approximate_age: '102',
                         sex: 'M',
                         shelter_id: shelter_1.id)
-    visit '/pets'
+    visit "/pets/#{pet_1.id}"
 
     within("#pet-#{pet_1.id}") do
       click_button "Add Pet To Favorites"

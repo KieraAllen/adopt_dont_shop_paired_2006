@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   delete '/reviews/:id', to: 'shelters/reviews#destroy'
 
 
-
+  get '/favorites', to: 'favorites#index'
   patch '/favorites/:id', to: 'favorites#update'
   # patch '/favorites/:pet_id', to: 'favorites#update'
   # resources :packages, only: [:create]

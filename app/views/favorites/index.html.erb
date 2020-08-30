@@ -11,6 +11,6 @@
     <p><%= pet.approximate_age %></p>
     <p><%= pet.sex %></p>
     <p><%= pet.shelter.name %></p>
-    <%= button_to "Remove From Favorites", "/favorites/#{@pet.id}", method: :delete %>
+    <%= button_to "Remove From Favorites", "/favorites/#{pet.id}", method: :delete %>
   </section>
 <% end %>
