@@ -122,4 +122,28 @@ RSpec.describe 'shelters show page', type: :feature do
 
     expect(page).to have_content('You need to fill in a title, rating, and content in order to submit a shelter review')
   end
+
+  it 'can delete a review' do
+    shelter_1 = Shelter.create(name: "The Dragon's Dream",
+                               address: '1554 Diamond Lane',
+                               city: 'Destin',
+                               state: 'FL',
+                               zip: '32540')
+
+    review_1 = Review.create( image: 'https://www.aspca.org/sites/default/files/styles/latest_story_465x458/public/field/image/blog/blog_separation-anxiety_082720_thumb.jpg?itok=99rlR42z',
+                              title: 'Very cool!',
+                              content: 'I rather liked the place!',
+                              rating: '5',
+                              shelter_id: shelter_1.id)
+
+    visit "/shelters/#{shelter_1.id}"
+    expect(page).to have_content(review_1.title)
+
+    click_link 'Delete Review'
+
+    expect(current_path).to eq("/shelters/#{shelter_1.id}")
+    expect(page).to_not have_content(review_1.title)
+  end
+
+
 end

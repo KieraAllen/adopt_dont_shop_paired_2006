@@ -153,7 +153,7 @@ And I can see my updated review
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 6, Edit a Shelter Review, cont.
 
