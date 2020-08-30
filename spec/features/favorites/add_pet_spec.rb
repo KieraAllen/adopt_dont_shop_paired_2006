@@ -3,10 +3,16 @@ require 'rails_helper'
 RSpec.describe "When a user adds pet to their favorites" do
 
   it "displays a message" do
-      shelter = Shelter.create(name: 'Denver Dumb Friends League')
-      pet_1 = shelter.pets.create(name: 'Eureka', approximate_age: 12, sex: 'F')
-    "you now have now favorited #{pet_1.name}"
-
+    shelter_1 = Shelter.create(name: "The Dragon's Dream",
+                               address: '1554 Diamond Lane',
+                               city: 'Destin',
+                               state: 'FL',
+                               zip: '32540')
+    pet_1 = Pet.create(image: 'TBD',
+                        name: 'Drax',
+                        approximate_age: '102',
+                        sex: 'M',
+                        shelter_id: shelter_1.id)
     visit '/pets'
 
     within("#pet-#{pet_1.id}") do
