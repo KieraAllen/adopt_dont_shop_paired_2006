@@ -20,10 +20,10 @@
 
   <h3> <%=  link_to review.title, "/shelters/#{@shelter.id}/reviews/#{review.id}" %>  </h3>
 
-  <p><%= review.rating %></p>
-  <p><%= review.content %></p>
+  <p>Rating: <%= review.rating %></p>
+  <p>Content: <%= review.content %></p>
+  <p>Shelter ID: <%= review.shelter_id %></p>
   <img src="<%= review.image %>" alt="<% "review_#{review.id}" %>">
-  <p><%= review.shelter_id %></p>
   <p><%=  link_to 'Edit Review', "/reviews/#{review.id}/edit" %></p>
   <p><%=  link_to 'Delete Review', "/reviews/#{review.id}", method: :delete %></p>
 <% end %>

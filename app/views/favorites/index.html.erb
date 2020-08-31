@@ -2,9 +2,16 @@
 <h1>All Favorites</h1>
 
 <% @pets.each do |pet| %>
+<%# The way we're going to get only the pets that belong here has something to do with the section id.
+
+Very likely we will have to implement some sort of 'if' statement in regards to the section id.  Like, go through each [what?] and find the section id, and if it's in that [what?], then you puts it in.
+
+ALSO very likely a DIFFERENT button, purely for removing the favorite and returning to the favorite.
+
+%>
   <section id="pet-<%= pet.id %>">
     <h3><a href="/shelters/:id/pets/<%= pet.id %>"><%= pet.name %></a></h3>
     <h3><%= pet.image %></h3>
-    <%= button_to "Remove From Favorites", "/favorites/#{pet.id}", method: :patch %>
+    <%= button_to "Remove From Favorites", "/favorites", method: :patch %>
   </section>
 <% end %>

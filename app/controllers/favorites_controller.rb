@@ -29,6 +29,15 @@ class FavoritesController < ApplicationController
     end
   end
 
+  #something like the below for the Remove From Favorites button on Favorites.
+
+  # def update_part2
+  #   pet = Pet.find(params[:id])
+  #   session[:favorites].delete(params[:id])
+  #   flash[:notice] = "#{pet.name} has been removed from your Favorites!"
+  #   redirect_to "/favorites"
+  # end
+
   def destroy
     Pet.destroy(params[:id])
     redirect_to "/favorites"
