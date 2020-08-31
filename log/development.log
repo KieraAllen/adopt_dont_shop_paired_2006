@@ -28824,3 +28824,226 @@ Processing by SheltersController#index as HTML
 Completed 200 OK in 52ms (Views: 43.4ms | ActiveRecord: 3.8ms)
 
 
+Started GET "/shelters/1" for ::1 at 2020-08-31 16:54:27 -0600
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShelter Load (0.6ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:7
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 1]]
+  ↳ app/views/shelters/show.html.erb:19
+  Rendered shelters/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 176ms (Views: 146.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/shelters/1/pets/" for ::1 at 2020-08-31 16:54:30 -0600
+Processing by Shelters::PetsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShelter Load (0.7ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shelters/pets_controller.rb:3
+  Rendering shelters/pets/index.html.erb within layouts/application
+  [1m[36mPet Load (1.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."shelter_id" = $1[0m  [["shelter_id", 1]]
+  ↳ app/views/shelters/pets/index.html.erb:6
+  Rendered shelters/pets/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 162ms (Views: 153.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/shelters/1/pets/1" for ::1 at 2020-08-31 16:54:34 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:7
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 61ms (Views: 50.0ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/favorites/1" for ::1 at 2020-08-31 16:54:35 -0600
+Processing by FavoritesController#update as HTML
+  Parameters: {"authenticity_token"=>"zl2f7CrOoIQiSEyNgtEsz2skipnLpKfuI0MyghxcGn5GRKnyHOBCR8h2raJ03LPzAMGVjnEHh+iwwhS/RmXRJA==", "id"=>"1"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:26
+Redirected to http://localhost:3000/pets/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/pets/1" for ::1 at 2020-08-31 16:54:35 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:7
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favorites" for ::1 at 2020-08-31 16:54:51 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/favorites/index.html.erb:20
+  [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/favorites/index.html.erb:20
+  [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/favorites/index.html.erb:20
+  [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/favorites/index.html.erb:20
+  [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/favorites/index.html.erb:20
+  [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/favorites/index.html.erb:20
+  [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/favorites/index.html.erb:20
+  [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/favorites/index.html.erb:20
+  Rendered favorites/index.html.erb within layouts/application (718717.2ms)
+Completed 500 Internal Server Error in 718741ms (ActiveRecord: 0.6ms)
+
+
+  
+SystemExit (exit):
+  
+app/views/favorites/index.html.erb:20:in `block in _app_views_favorites_index_html_erb__3300954327532992322_70159039695340'
+app/views/favorites/index.html.erb:4:in `each'
+app/views/favorites/index.html.erb:4:in `_app_views_favorites_index_html_erb__3300954327532992322_70159039695340'
+Started GET "/pets/1" for ::1 at 2020-08-31 17:08:14 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (2.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:7
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 55ms (Views: 44.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/favorites" for ::1 at 2020-08-31 17:08:17 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (11.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:5
+  Rendered favorites/index.html.erb within layouts/application (79386.2ms)
+Completed 200 OK in 79443ms (Views: 79424.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 17:09:46 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorites" for ::1 at 2020-08-31 17:09:49 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:5
+  Rendered favorites/index.html.erb within layouts/application (8621.0ms)
+Completed 500 Internal Server Error in 8636ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     5:     <% @pets.each do |pet| %>
+     6:     <% binding.pry %>
+     7:       <% if pet.id == favorite_pet[0].to_i %>
+     8:         <h3><%= link_to pet.name, "/shelters/#{@shelter.id}/pets/#{pet.id}" %>  </h3>
+     9:         <h3><%= pet.image %></h3>
+    10:         <%= button_to "Remove From Favorites", "/favorites", method: :patch %>
+    11:       <% else %>
+  
+app/views/favorites/index.html.erb:8:in `block (2 levels) in _app_views_favorites_index_html_erb__3300954327532992322_70159038055740'
+app/views/favorites/index.html.erb:5:in `block in _app_views_favorites_index_html_erb__3300954327532992322_70159038055740'
+app/views/favorites/index.html.erb:4:in `each'
+app/views/favorites/index.html.erb:4:in `_app_views_favorites_index_html_erb__3300954327532992322_70159038055740'
+Started GET "/" for ::1 at 2020-08-31 17:10:45 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorites" for ::1 at 2020-08-31 17:10:48 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (1.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:5
+  Rendered favorites/index.html.erb within layouts/application (50447.2ms)
+Completed 500 Internal Server Error in 50467ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     5:     <% @pets.each do |pet| %>
+     6:       <% if pet.id == favorite_pet[0].to_i %>
+     7:       <% binding.pry %>
+     8:         <h3><%= link_to pet.name, "/shelters/#{@shelter.id}/pets/#{pet.id}" %>  </h3>
+     9:         <h3><%= pet.image %></h3>
+    10:         <%= button_to "Remove From Favorites", "/favorites", method: :patch %>
+    11:       <% else %>
+  
+app/views/favorites/index.html.erb:8:in `block (2 levels) in _app_views_favorites_index_html_erb__3300954327532992322_70159050815440'
+app/views/favorites/index.html.erb:5:in `block in _app_views_favorites_index_html_erb__3300954327532992322_70159050815440'
+app/views/favorites/index.html.erb:4:in `each'
+app/views/favorites/index.html.erb:4:in `_app_views_favorites_index_html_erb__3300954327532992322_70159050815440'
+Started GET "/" for ::1 at 2020-08-31 17:11:46 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 87ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorites" for ::1 at 2020-08-31 17:11:48 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:5
+  [1m[36mShelter Load (5.0ms)[0m  [1m[34mSELECT "shelters".* FROM "shelters"[0m
+  ↳ app/views/favorites/index.html.erb:7
+  Rendered favorites/index.html.erb within layouts/application (77109.0ms)
+Completed 500 Internal Server Error in 77153ms (ActiveRecord: 49.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     5:     <% @pets.each do |pet| %>
+     6:       <% if pet.id == favorite_pet[0].to_i %>
+     7:       <% binding.pry %>
+     8:         <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
+     9:         <h3><%= pet.image %></h3>
+    10:         <%= button_to "Remove From Favorites", "/favorites", method: :patch %>
+    11:       <% else %>
+  
+app/views/favorites/index.html.erb:8:in `block (2 levels) in _app_views_favorites_index_html_erb__3300954327532992322_70158978512660'
+app/views/favorites/index.html.erb:5:in `block in _app_views_favorites_index_html_erb__3300954327532992322_70158978512660'
+app/views/favorites/index.html.erb:4:in `each'
+app/views/favorites/index.html.erb:4:in `_app_views_favorites_index_html_erb__3300954327532992322_70158978512660'
+Started GET "/" for ::1 at 2020-08-31 17:13:14 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 95ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 17:13:28 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-31 17:13:31 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorites" for ::1 at 2020-08-31 17:13:33 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (4.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:5
+  Rendered favorites/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 86ms (Views: 59.3ms | ActiveRecord: 14.9ms)
+
+
