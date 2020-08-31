@@ -3,31 +3,29 @@ class Favorite
 
   def initialize(contents)
     if contents
-      @contents = contents
+      @favorite_pets = contents
     else
-      @contents = Hash.new
+      @favorite_pets = Hash.new
     end
   end
 
   def total_count
-    @contents.values.sum
+    @favorite_pets.values.sum
   end
 
   def add_pet(pet)
-    
-    pet_id_str = pet.id.to_s
-    @contents[pet_id_str] ||= 0
-    @contents[pet_id_str] += 1
+    @favorite_pets[pet] = 1
   end
 
-  def count_of(id)
-    @contents[id.to_s].to_i
-  end
+# maybe don't need this
+  # def count_of(id)
+  #   @favorite_pets[id.to_s].to_i
+  # end
 
-  def quantity_of(pet)
-    pet_id_str = pet.id.to_s
-    @contents[pet_id_str]
-  end
+  # def quantity_of(pet)
+  #   pet_id_str = pet.id.to_s
+  #   @favorite_pets[pet_id_str]
+  # end
 
 
 end

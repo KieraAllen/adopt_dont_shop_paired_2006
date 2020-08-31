@@ -3,7 +3,13 @@ class FavoritesController < ApplicationController
   before_action :favorites
 
   def index
-    @pets = Pet.all
+    #should be whatever is in @favorites = session[:favorites].
+    # Iterrate on that hash and put everyone that's in that hash.
+
+    #  Use the work done in the PORO to get the Pets that we want to Show.
+    #
+    #  ActiveRecord method, pet.where(id), pass it the ids that we want.
+    @favorite_pets = session[:favorites]
   end
 
   # def update
@@ -16,14 +22,15 @@ class FavoritesController < ApplicationController
   # end
 
   def update
+    binding.pry
     pet = Pet.find(params[:id])
-    if favorites.contents.include?(pet.id.to_s)
+    if favorites.favorite_pets.include?(pet)
       session[:favorites].delete(params[:id])
       flash[:notice] = "#{pet.name} has been removed from your Favorites!"
       redirect_to "/pets/#{pet.id}"
     else
       favorites.add_pet(pet)
-      session[:favorites] = favorites.contents
+      session[:favorites] = favorites.favorite_pets
       flash[:notice] = "#{pet.name} has been added to your Favorites!"
       redirect_to "/pets/#{pet.id}"
     end
