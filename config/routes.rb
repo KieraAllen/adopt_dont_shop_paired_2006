@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   delete '/shelters/:id', to: 'shelters#destroy'
 
   get '/pets', to: 'pets#index'
+
   get '/shelters/:id/pets', to: 'shelters/pets#index'
   get '/pets/:id/edit', to: 'shelters/pets#edit'
   get '/pets/:id', to: 'pets#show'
@@ -24,12 +25,14 @@ Rails.application.routes.draw do
   get '/shelters/:id/reviews/new', to: 'shelters/reviews#new'
   get '/shelters/:id/reviews', to: 'shelters#show'
   post '/shelters/:id/reviews', to: 'shelters/reviews#create'
-  get '/reviews/:id/edit', to: 'shelters/reviews#update'
+  get '/reviews/:id/edit', to: 'reviews#edit'
   patch '/reviews/:id', to: 'reviews#update'
   get '/shelters/:id/reviews/:id', to: 'reviews#show'
   delete '/reviews/:id', to: 'shelters/reviews#destroy'
 
+
+  get '/favorites', to: 'favorites#index'
   patch '/favorites/:id', to: 'favorites#update'
-  resources :packages, only: [:create]
-  delete '/favorites', to: 'favorites#destroy'
+  patch '/favorites', to: 'favorites#update_part2'
+  # resources :packages, only: [:create]
 end

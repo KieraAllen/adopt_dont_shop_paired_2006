@@ -121,7 +121,7 @@ I also see a field where I can enter an optional image (web address)
 When the form is submitted, I should return to that shelter's show page
 and I can see my new review
 ```
- 
+
 ```
 [x] done
 
@@ -153,7 +153,7 @@ And I can see my updated review
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 6, Edit a Shelter Review, cont.
 
@@ -206,7 +206,7 @@ The favorite indicator in the nav bar has incremented by one
 
 
 ```
-[ ] done
+[x] done
 
 User Story 10, Favorite Index Page
 
@@ -230,7 +230,7 @@ I am taken to the favorites index page
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 12, Can't Favorite a Pet More Than Once
 

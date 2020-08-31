@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AdoptDontShopPaired</title>
+    <title>Adopt Don't Shop Paired</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
-
-<%# this should eventually work without the 'if' block %>
-<% if @favorites %>
-  <p>Favorites: <%= @favorites.total_count %> </p>
-<% end %>
-
-
   <body>
-    <% flash.each do |name, message| %>
-      <div class='alert alert-<%= name %>'></div>
-        <%= message %>
-    <% end%>
-    <%= yield %>
+    <% flash.each do |type, message| %>
+        <section class=<%= type %>>
+          <p><%= message %></p>
+        </section>
+    <% end %>
+
+    <p>|| <a href="javascript:history.back()">Back</a> || <a href="/">Home</a> || <a href="/shelters">Shelter Index</a> || <a href="/pets">Pet Index</a> ||<a href="/reviews">Reviews Index</a> || <a href="/favorites">Favorites:</a> <%= @favorites.total_count %> </p>
+  <%= yield %>
   </body>
 </html>

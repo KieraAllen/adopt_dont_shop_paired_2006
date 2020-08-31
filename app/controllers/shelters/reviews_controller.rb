@@ -22,15 +22,17 @@ class Shelters::ReviewsController < ApplicationController
     review = Review.find(params[:id])
     review.update(review_params)
     if review.save
-      redirect_to "/shelters/#{params[:id]}"
+      redirect_to "/shelters/#{@review.shelter.id}"
     else
       redirect_to "/shelters/#{params[:id]}/reviews/new", danger: 'You need to fill in a title, rating, and content in order to submit a shelter review'
     end
   end
 
   def destroy
+    review = Review.find(params[:id])
+    shelter_id = review.shelter.id
     Review.destroy(params[:id])
-    redirect_to "/reviews"
+    redirect_to "/shelters/#{shelter_id}"
   end
 
   private

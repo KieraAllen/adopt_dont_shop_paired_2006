@@ -1,6 +1,6 @@
 class Shelters::PetsController < ApplicationController
   def index
-    @shelter = Shelter.find(params[:shelter_id])
+    @shelter = Shelter.find(params[:id])
   end
 
   def new
