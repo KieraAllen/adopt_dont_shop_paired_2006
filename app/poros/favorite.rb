@@ -1,9 +1,9 @@
 class Favorite
-  attr_reader :contents
+  attr_reader :favorite_pets
 
-  def initialize(contents)
-    if contents
-      @favorite_pets = contents
+  def initialize(session)
+    if session
+      @favorite_pets = session
     else
       @favorite_pets = Hash.new
     end
@@ -14,18 +14,9 @@ class Favorite
   end
 
   def add_pet(pet)
-    @favorite_pets[pet] = 1
+    pet_id_str = pet.id.to_s
+    @favorite_pets[pet_id_str] = 1
   end
-
-# maybe don't need this
-  # def count_of(id)
-  #   @favorite_pets[id.to_s].to_i
-  # end
-
-  # def quantity_of(pet)
-  #   pet_id_str = pet.id.to_s
-  #   @favorite_pets[pet_id_str]
-  # end
 
 
 end

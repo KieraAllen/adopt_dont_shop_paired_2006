@@ -10,6 +10,7 @@ class FavoritesController < ApplicationController
     #
     #  ActiveRecord method, pet.where(id), pass it the ids that we want.
     @favorite_pets = session[:favorites]
+    @pets = Pet.all
   end
 
   # def update
@@ -22,9 +23,8 @@ class FavoritesController < ApplicationController
   # end
 
   def update
-    binding.pry
     pet = Pet.find(params[:id])
-    if favorites.favorite_pets.include?(pet)
+    if favorites.favorite_pets.include?(pet.id.to_s)
       session[:favorites].delete(params[:id])
       flash[:notice] = "#{pet.name} has been removed from your Favorites!"
       redirect_to "/pets/#{pet.id}"
