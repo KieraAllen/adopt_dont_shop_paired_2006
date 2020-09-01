@@ -10,7 +10,7 @@
             <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
             <h3><%= pet.image %></h3>
             <div class="button">
-                <%= button_to "Remove From Favorites", "/favorites", method: :patch %>
+                <%= button_to "Remove From Favorites", "/favorites/#{pet.id}/remove", method: :patch %>
             </div>
           <% else %>
             <% next %>

@@ -247,7 +247,7 @@ And I also see that my favorites indicator has decremented by 1
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 13, Remove a Favorite from Favorites Page
 

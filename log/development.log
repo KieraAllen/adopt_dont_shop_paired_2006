@@ -29897,3 +29897,92 @@ Processing by PetsController#show as HTML
 Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.2ms)
 
 
+Started PATCH "/favorites/4" for ::1 at 2020-09-01 15:10:30 -0600
+Processing by FavoritesController#update as HTML
+  Parameters: {"authenticity_token"=>"g92KWGiAn/F/FdvEe6nDzKjC7tinU7NfjSN4D8E0WVUabUJYisbaeMnQk+d7enMSXW7kLwQcjhpZOSDwQqfiYw==", "id"=>"4"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:12
+Redirected to http://localhost:3000/pets/4
+Completed 302 Found in 70594ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/pets/4" for ::1 at 2020-09-01 15:11:41 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:7
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 46ms (Views: 23.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/pets/4" for ::1 at 2020-09-01 15:23:37 -0600
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:7
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 63ms (Views: 27.4ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/favorites" for ::1 at 2020-09-01 15:23:38 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:8
+  Rendered favorites/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/favorites/4/remove" for ::1 at 2020-09-01 15:23:40 -0600
+Processing by FavoritesController#remove as HTML
+  Parameters: {"authenticity_token"=>"9BkjSY1MsByhsoVf3mJk8Vq1cLN8L1skpadZE/PpRzltqetJbwr1lRd3zXzesdQvrxl6RN9gZmFxvQHscHr8Dw==", "id"=>"4"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:25
+Redirected to http://localhost:3000/favorites
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/favorites" for ::1 at 2020-09-01 15:23:40 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-01 15:23:58 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorites" for ::1 at 2020-09-01 15:24:02 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-01 15:24:05 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorites" for ::1 at 2020-09-01 15:24:06 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-01 15:24:07 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
