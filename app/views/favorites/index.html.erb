@@ -1,6 +1,9 @@
 
 <h1>All Favorites</h1>
 
+<%= button_to "Remove ALL from Favorites", "/favorites/", method: :patch %>
+
+<h2>Favorite Pets:</h2>
 <% if @favorites.favorite_pets == {} %>
     <%= "You have no favorited pets!" %>
 <% else %>
