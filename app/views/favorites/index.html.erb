@@ -6,7 +6,7 @@
       <% if pet.id == favorite_pet[0].to_i %>
         <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
         <h3><%= pet.image %></h3>
-        <%= button_to "Remove From Favorites", "/favorites", method: :patch %>
+        <%= button_to "Remove From Favorites", "/favorites/#{pet.id}", method: :patch %>
       <% else %>
         <% next %>
       <% end %>

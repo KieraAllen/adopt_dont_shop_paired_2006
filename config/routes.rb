@@ -33,6 +33,5 @@ Rails.application.routes.draw do
 
   get '/favorites', to: 'favorites#index'
   patch '/favorites/:id', to: 'favorites#update'
-  patch '/favorites', to: 'favorites#update_part2'
   # resources :packages, only: [:create]
 end
