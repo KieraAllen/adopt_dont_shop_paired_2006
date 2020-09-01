@@ -21,4 +21,12 @@ class FavoritesController < ApplicationController
     end
   end
 
+  def remove
+    require "pry"; binding.pry
+    pet = Pet.find(params[:id])
+    session[:favorites].delete(params[:id])
+    flash[:notice] = "#{pet.name} has been removed from your Favorites!"
+    redirect_to "/favorites"
+  end
+
 end
