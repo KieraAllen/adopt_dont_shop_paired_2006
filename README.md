@@ -273,7 +273,7 @@ I see text saying that I have no favorited pets
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 15, Remove all Favorite from Favorites Page
 

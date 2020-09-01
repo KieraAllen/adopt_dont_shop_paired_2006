@@ -3,6 +3,8 @@
 
 <%= button_to "Remove ALL from Favorites", "/favorites/", method: :patch %>
 
+<%= link_to "Adopt Your Favorite Pets", "/adoption_apps/new" %>
+
 <h2>Favorite Pets:</h2>
 <% if @favorites.favorite_pets == {} %>
     <%= "You have no favorited pets!" %>
