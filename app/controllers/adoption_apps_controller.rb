@@ -1,7 +1,12 @@
 class AdoptionAppsController < ApplicationController
 
+  def index
+    @pets = Pet.all
+  end
 
-def new; end
+  def new
+    @pets = Pet.all
+  end
 
 
 end

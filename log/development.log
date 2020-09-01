@@ -30231,3 +30231,181 @@ Processing by FavoritesController#index as HTML
 Completed 200 OK in 68ms (Views: 54.4ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/favorites" for ::1 at 2020-09-01 16:36:43 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:13
+  Rendered favorites/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 59ms (Views: 40.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/favorites" for ::1 at 2020-09-01 16:37:31 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:14
+  Rendered favorites/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/favorites" for ::1 at 2020-09-01 16:37:37 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:14
+  Rendered favorites/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adoption_apps/new" for ::1 at 2020-09-01 16:37:40 -0600
+Processing by AdoptionAppsController#new as HTML
+  Rendering adoption_apps/new.html.erb within layouts/application
+  Rendered adoption_apps/new.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5:     <%= "You have no favorited pets!" %>
+     6: <% else %>
+     7:     <% @favorites.favorite_pets.each do |favorite_pet| %>
+     8:         <% @pets.each do |pet| %>
+     9:           <% if pet.id == favorite_pet[0].to_i %>
+    10:             <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
+    11:             <h3><%= pet.image %></h3>
+  
+app/views/adoption_apps/new.html.erb:8:in `block in _app_views_adoption_apps_new_html_erb__90601284869818175_70316625825020'
+app/views/adoption_apps/new.html.erb:7:in `each'
+app/views/adoption_apps/new.html.erb:7:in `_app_views_adoption_apps_new_html_erb__90601284869818175_70316625825020'
+Started GET "/adoption_apps/new" for ::1 at 2020-09-01 16:37:55 -0600
+Processing by AdoptionAppsController#new as HTML
+  Rendering adoption_apps/new.html.erb within layouts/application
+  Rendered adoption_apps/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5:     <%= "You have no favorited pets!" %>
+     6: <% else %>
+     7:     <% @favorites.favorite_pets.each do |favorite_pet| %>
+     8:         <% @pets.each do |pet| %>
+     9:           <% if pet.id == favorite_pet[0].to_i %>
+    10:             <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
+    11:             <h3><%= pet.image %></h3>
+  
+app/views/adoption_apps/new.html.erb:8:in `block in _app_views_adoption_apps_new_html_erb__90601284869818175_70316566609440'
+app/views/adoption_apps/new.html.erb:7:in `each'
+app/views/adoption_apps/new.html.erb:7:in `_app_views_adoption_apps_new_html_erb__90601284869818175_70316566609440'
+Started GET "/adoption_apps/new" for ::1 at 2020-09-01 16:39:12 -0600
+Processing by AdoptionAppsController#new as HTML
+  Rendering adoption_apps/new.html.erb within layouts/application
+  Rendered adoption_apps/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5:     <%= "You have no favorited pets!" %>
+     6: <% else %>
+     7:     <% @favorites.favorite_pets.each do |favorite_pet| %>
+     8:         <% @pets.each do |pet| %>
+     9:           <% if pet.id == favorite_pet[0].to_i %>
+    10:             <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
+    11:             <h3><%= pet.image %></h3>
+  
+app/views/adoption_apps/new.html.erb:8:in `block in _app_views_adoption_apps_new_html_erb__90601284869818175_70316580191400'
+app/views/adoption_apps/new.html.erb:7:in `each'
+app/views/adoption_apps/new.html.erb:7:in `_app_views_adoption_apps_new_html_erb__90601284869818175_70316580191400'
+Started GET "/favorites" for ::1 at 2020-09-01 16:39:48 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:14
+  Rendered favorites/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 39ms (Views: 26.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/adoption_apps/new" for ::1 at 2020-09-01 16:39:49 -0600
+Processing by AdoptionAppsController#new as HTML
+  Rendering adoption_apps/new.html.erb within layouts/application
+  Rendered adoption_apps/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5:     <%= "You have no favorited pets!" %>
+     6: <% else %>
+     7:     <% @favorites.favorite_pets.each do |favorite_pet| %>
+     8:         <% @pets.each do |pet| %>
+     9:           <% if pet.id == favorite_pet[0].to_i %>
+    10:             <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
+    11:             <h3><%= pet.image %></h3>
+  
+app/views/adoption_apps/new.html.erb:8:in `block in _app_views_adoption_apps_new_html_erb__90601284869818175_70316635533740'
+app/views/adoption_apps/new.html.erb:7:in `each'
+app/views/adoption_apps/new.html.erb:7:in `_app_views_adoption_apps_new_html_erb__90601284869818175_70316635533740'
+Started GET "/adoption_apps/new" for ::1 at 2020-09-01 16:41:25 -0600
+Processing by AdoptionAppsController#new as HTML
+  Rendering adoption_apps/new.html.erb within layouts/application
+  Rendered adoption_apps/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5:     <%= "You have no favorited pets!" %>
+     6: <% else %>
+     7:     <% @favorites.favorite_pets.each do |favorite_pet| %>
+     8:         <% @pets.each do |pet| %>
+     9:           <% if pet.id == favorite_pet[0].to_i %>
+    10:             <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
+    11:             <h3><%= pet.image %></h3>
+  
+app/views/adoption_apps/new.html.erb:8:in `block in _app_views_adoption_apps_new_html_erb__90601284869818175_70316627164320'
+app/views/adoption_apps/new.html.erb:7:in `each'
+app/views/adoption_apps/new.html.erb:7:in `_app_views_adoption_apps_new_html_erb__90601284869818175_70316627164320'
+Started GET "/favorites" for ::1 at 2020-09-01 16:53:53 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:14
+  Rendered favorites/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 70ms (Views: 51.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/adoption_apps/new" for ::1 at 2020-09-01 16:53:55 -0600
+Processing by AdoptionAppsController#new as HTML
+  Rendering adoption_apps/new.html.erb within layouts/application
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/adoption_apps/new.html.erb:9
+  Rendered adoption_apps/new.html.erb within layouts/application (18760.4ms)
+Completed 500 Internal Server Error in 18770ms (ActiveRecord: 0.7ms)
+
+
+  
+SystemExit (exit):
+  
+app/views/adoption_apps/new.html.erb:8:in `block in _app_views_adoption_apps_new_html_erb__90601284869818175_70316579994040'
+app/views/adoption_apps/new.html.erb:7:in `each'
+app/views/adoption_apps/new.html.erb:7:in `_app_views_adoption_apps_new_html_erb__90601284869818175_70316579994040'
+Started GET "/favorites" for ::1 at 2020-09-01 16:54:23 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:14
+  Rendered favorites/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adoption_apps/new" for ::1 at 2020-09-01 16:54:24 -0600
+Processing by AdoptionAppsController#new as HTML
+  Rendering adoption_apps/new.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/adoption_apps/new.html.erb:9
+  Rendered adoption_apps/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
