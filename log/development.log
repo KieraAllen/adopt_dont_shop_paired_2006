@@ -29707,3 +29707,12 @@ Processing by PetsController#show as HTML
 Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/favorites" for ::1 at 2020-09-01 14:37:32 -0600
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/favorites/index.html.erb:5
+  Rendered favorites/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+

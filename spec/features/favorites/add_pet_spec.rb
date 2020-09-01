@@ -45,24 +45,4 @@ RSpec.describe "When a user adds pet to their favorites" do
 
   end
 
-
-
-
-
-
-
-
-
-
-
-  # expect(page).to have_content("Remove Pet From Favorites")
-  #
-  # click_button "Remove Pet From Favorites"
-  #
-  # expect(page).to have_content("Favorites: 0")
-  #
-  # expect(page).to_not have_content("Remove Pet From Favorites")
-  #
-  # expect(page).to have_content("Add Pet to Favorites")
-
 end
