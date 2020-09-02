@@ -36,5 +36,5 @@ Rails.application.routes.draw do
   patch '/favorites', to: 'favorites#remove_all'
 
   get '/adoption_apps/new', to: 'adoption_apps#new'
-
+  post '/adoption_apps', to: 'adoption_apps#create'
 end
