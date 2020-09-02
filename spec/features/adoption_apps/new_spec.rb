@@ -27,7 +27,6 @@ RSpec.describe 'when a user wants to apply to adopt a pet' do
     visit '/favorites'
     click_link("Adopt Your Favorite Pets")
 
-    # page.check("Select #{@pet_1.name}")
     find(:css, "##{@pet_1.id}[value='Selected']").set(true)
   end
 
@@ -63,7 +62,7 @@ RSpec.describe 'when a user wants to apply to adopt a pet' do
 
   # I see a flash message indicating my application went through for the pets that were selected
   it "sees a flash message indicating my application went through for the pets that were selected" do
-    second('.check').check("Remove From Favorites")
+    # find(:css, "##{@pet_2.id}[value='Selected']").set(true)
 
     fill_in 'Name', with: "Balthezar"
     fill_in 'Address', with: '1554 Diamond Lane'

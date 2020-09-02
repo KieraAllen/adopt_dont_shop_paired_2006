@@ -30950,3 +30950,12 @@ Processing by AdoptionAppsController#new as HTML
 Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/adoption_apps/new" for ::1 at 2020-09-02 15:28:25 -0600
+Processing by AdoptionAppsController#new as HTML
+  Rendering adoption_apps/new.html.erb within layouts/application
+  [1m[36mPet Load (1.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/adoption_apps/new.html.erb:10
+  Rendered adoption_apps/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 67ms (Views: 56.6ms | ActiveRecord: 1.3ms)
+
+

@@ -8,7 +8,6 @@ class FavoritesController < ApplicationController
   end
 
   def update
-
     pet = Pet.find(params[:id])
     if favorites.favorite_pets.include?(pet.id.to_s)
       session[:favorites].delete(params[:id])

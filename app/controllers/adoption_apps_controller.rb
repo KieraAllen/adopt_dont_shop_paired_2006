@@ -11,10 +11,18 @@ class AdoptionAppsController < ApplicationController
 
   def create
     AdoptionApp.create(adoption_app_params)
+    require "pry"; binding.pry
+
+
+
+
+    flash[:notice] = "#{pet.name} has been removed from your Favorites!"
+
+
+
+
     #something that removes the selected pets from favorites
-    
     # session[:favorites].delete(params[:id])
-    # flash[:notice] = "#{pet.name} has been removed from your Favorites!"
 
     redirect_to '/favorites'
   end

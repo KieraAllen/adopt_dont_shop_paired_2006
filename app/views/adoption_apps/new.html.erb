@@ -14,7 +14,7 @@
             <h3><%= pet.image %></h3>
             <form action="/action_page.php">
               <input type="checkbox" id=<%= pet.id %> name=<%= pet.name %> value="Selected">
-              <label for="#{pet.name}"> <%= "Select #{pet.name}" %> </label>
+              <label for=<%= pet.name %>> <%= "Select #{pet.name}" %> </label>
             </form>
             --------</br>
           <% else %>
