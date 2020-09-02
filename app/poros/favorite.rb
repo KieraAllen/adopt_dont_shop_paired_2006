@@ -17,6 +17,4 @@ class Favorite
     pet_id_str = pet.id.to_s
     @favorite_pets[pet_id_str] = 1
   end
-
-
 end

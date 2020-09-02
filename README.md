@@ -247,7 +247,7 @@ And I also see that my favorites indicator has decremented by 1
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 13, Remove a Favorite from Favorites Page
 
@@ -257,13 +257,12 @@ And I visit my favorites page ("/favorites")
 Next to each pet, I see a button or link to remove that pet from my favorites
 When I click on that button or link to remove a favorite
 A delete request is sent to "/favorites/:pet_id"
-(WE DONT HAVE A DELETE REQUEST... WE ARE DOING A DELETE REQUEST THROUGH AN UPDATE ACTION)
 And I'm redirected back to the favorites page where I no longer see that pet listed
 And I also see that the favorites indicator has decremented by 1
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 14, No Favorites Page
 
@@ -274,7 +273,7 @@ I see text saying that I have no favorited pets
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 15, Remove all Favorite from Favorites Page
 

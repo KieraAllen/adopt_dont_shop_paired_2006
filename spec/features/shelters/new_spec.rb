@@ -20,8 +20,8 @@ require 'rails_helper'
 
 RSpec.describe 'New Shelter' do
   describe 'As a visitor' do
-    describe 'When I visit the new artist form by clicking a link on the index' do
-      it 'I can create a new artist' do
+    describe 'When I visit the new shelter form by clicking a link on the index' do
+      it 'I can create a new shelter' do
         visit '/shelters'
 
         click_link 'New Shelter'

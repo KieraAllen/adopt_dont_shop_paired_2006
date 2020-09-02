@@ -8,6 +8,7 @@ class FavoritesController < ApplicationController
   end
 
   def update
+
     pet = Pet.find(params[:id])
     if favorites.favorite_pets.include?(pet.id.to_s)
       session[:favorites].delete(params[:id])
@@ -20,15 +21,17 @@ class FavoritesController < ApplicationController
       redirect_to "/pets/#{pet.id}"
     end
   end
-  
-#
-# #this is what we'll use to remove a pet from favorites On The Favorites Page
-#   def update_part_2
-#     pet = Pet.find(params[:id])
-#     session[:favorites].delete(params[:id])
-#     flash[:notice] = "#{pet.name} has been removed from your Favorites!"
-#     redirect_to "/pets/#{pet.id}"
-#     redirect_to "/favorites"
-#   end
+
+  def remove
+    pet = Pet.find(params[:id])
+    session[:favorites].delete(params[:id])
+    flash[:notice] = "#{pet.name} has been removed from your Favorites!"
+    redirect_to "/favorites"
+  end
+
+  def remove_all
+    favorites.favorite_pets.clear
+    redirect_to "/favorites"
+  end
 
 end

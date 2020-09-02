@@ -16,7 +16,7 @@ RSpec.describe "When a user adds pet to their favorites" do
 
     visit "/pets/#{pet_1.id}"
 
-    click_button "Add Pet To Favorites"
+    click_button "Add or Remove Pet from Favorites"
 
     expect(page).to have_content("#{pet_1.name} has been added to your Favorites!")
   end
@@ -44,25 +44,5 @@ RSpec.describe "When a user adds pet to their favorites" do
     expect(page).to have_selector(:link_or_button, "Add or Remove Pet from Favorites")
 
   end
-
-
-
-
-
-
-
-
-
-
-
-  # expect(page).to have_content("Remove Pet From Favorites")
-  #
-  # click_button "Remove Pet From Favorites"
-  #
-  # expect(page).to have_content("Favorites: 0")
-  #
-  # expect(page).to_not have_content("Remove Pet From Favorites")
-  #
-  # expect(page).to have_content("Add Pet to Favorites")
 
 end

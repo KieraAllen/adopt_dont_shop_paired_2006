@@ -30,8 +30,11 @@ Rails.application.routes.draw do
   get '/shelters/:id/reviews/:id', to: 'reviews#show'
   delete '/reviews/:id', to: 'shelters/reviews#destroy'
 
-
   get '/favorites', to: 'favorites#index'
   patch '/favorites/:id', to: 'favorites#update'
-  # resources :packages, only: [:create]
+  patch '/favorites/:id/remove', to: 'favorites#remove'
+  patch '/favorites', to: 'favorites#remove_all'
+
+  get '/adoption_apps/new', to: 'adoption_apps#new'
+  post '/adoption_apps', to: 'adoption_apps#create'
 end

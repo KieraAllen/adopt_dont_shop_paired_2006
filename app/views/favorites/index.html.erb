@@ -1,14 +1,26 @@
 
 <h1>All Favorites</h1>
 
-<% @favorites.favorite_pets.each do |favorite_pet| %>
-    <% @pets.each do |pet| %>
-      <% if pet.id == favorite_pet[0].to_i %>
-        <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
-        <h3><%= pet.image %></h3>
-        <%= button_to "Remove From Favorites", "/favorites/#{pet.id}", method: :patch %>
-      <% else %>
-        <% next %>
-      <% end %>
+<%= link_to "Adopt Your Favorite Pets", "/adoption_apps/new" %></br></br>
+
+<%= button_to "Remove ALL from Favorites", "/favorites/", method: :patch %>
+
+
+<h2>Favorite Pets:</h2>
+<% if @favorites.favorite_pets == {} %>
+    <%= "You have no favorited pets!" %>
+<% else %>
+    <% @favorites.favorite_pets.each do |favorite_pet| %>
+        <% @pets.each do |pet| %>
+          <% if pet.id == favorite_pet[0].to_i %>
+            <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
+            <h3><%= pet.image %></h3>
+            <div class="button">
+                <%= button_to "Remove From Favorites", "/favorites/#{pet.id}/remove", method: :patch %>
+            </div>
+          <% else %>
+            <% next %>
+          <% end %>
+        <% end %>
     <% end %>
 <% end %>
