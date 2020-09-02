@@ -9,9 +9,14 @@
     <% @favorites.favorite_pets.each do |favorite_pet| %>
         <% @pets.each do |pet| %>
           <% if pet.id == favorite_pet[0].to_i %>
-            <h2><%= "SELECT CHECK MARK" %></h2>
+            --------
             <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
             <h3><%= pet.image %></h3>
+            <form action="/action_page.php">
+              <input type="checkbox" id=<%= pet.id %> name=<%= pet.name %> value="Selected">
+              <label for="#{pet.name}"> <%= "Select #{pet.name}" %> </label>
+            </form>
+            --------</br>
           <% else %>
             <% next %>
           <% end %>
