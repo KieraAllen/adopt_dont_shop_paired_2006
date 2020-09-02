@@ -21,11 +21,12 @@ RSpec.describe 'when a user wants to apply to adopt a pet' do
 
     visit "/pets/#{@pet_1.id}"
     click_button "Add or Remove Pet from Favorites"
-    # visit "/pets/#{@pet_2.id}"
-    # click_button "Add or Remove Pet from Favorites"
+    visit "/pets/#{@pet_2.id}"
+    click_button "Add or Remove Pet from Favorites"
 
     visit '/favorites'
     click_link("Adopt Your Favorite Pets")
+    expect(current_path).to eq("/adoption_apps/new")
 
     find(:css, "##{@pet_1.id}[value='Selected']").set(true)
   end
@@ -36,14 +37,6 @@ RSpec.describe 'when a user wants to apply to adopt a pet' do
     expect(page).to have_content(@pet_1.name)
 
     expect(page).to have_content("Select #{@pet_1.name}")
-  end
-
-  it 'visits favorites page and goes to new app form' do
-    expect(page).to have_link("Adopt Your Favorite Pets")
-
-    click_link("Adopt Your Favorite Pets")
-
-    expect(current_path).to eq("/adoption_apps/new")
   end
 
   it "has fields for visitor to fill in their information" do
@@ -62,7 +55,7 @@ RSpec.describe 'when a user wants to apply to adopt a pet' do
 
   # I see a flash message indicating my application went through for the pets that were selected
   it "sees a flash message indicating my application went through for the pets that were selected" do
-    # find(:css, "##{@pet_2.id}[value='Selected']").set(true)
+    find(:css, "##{@pet_2.id}[value='Selected']").set(true)
 
     fill_in 'Name', with: "Balthezar"
     fill_in 'Address', with: '1554 Diamond Lane'

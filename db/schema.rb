@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_02_001904) do
+ActiveRecord::Schema.define(version: 2020_09_02_222326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 2020_09_02_001904) do
     t.string "creep_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pet_adoption_apps", force: :cascade do |t|
+    t.bigint "pet_id"
+    t.bigint "adoption_app_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["adoption_app_id"], name: "index_pet_adoption_apps_on_adoption_app_id"
+    t.index ["pet_id"], name: "index_pet_adoption_apps_on_pet_id"
   end
 
   create_table "pets", force: :cascade do |t|
@@ -62,6 +71,8 @@ ActiveRecord::Schema.define(version: 2020_09_02_001904) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "pet_adoption_apps", "adoption_apps"
+  add_foreign_key "pet_adoption_apps", "pets"
   add_foreign_key "pets", "shelters"
   add_foreign_key "reviews", "shelters"
 end
