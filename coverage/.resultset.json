@@ -288,9 +288,8 @@
           null
         ]
       },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/models/shelter.rb": {
+      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/models/adoption_app.rb": {
         "lines": [
-          1,
           1,
           1,
           null
@@ -302,146 +301,8 @@
           1,
           null
         ]
-      },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/models/pet.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/controllers/pets_controller.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          8,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          28,
-          null,
-          null
-        ]
-      },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/poros/favorite.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          16,
-          12,
-          null,
-          4,
-          null,
-          null,
-          null,
-          1,
-          12,
-          null,
-          null,
-          1,
-          4,
-          4,
-          null,
-          null
-        ]
-      },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/controllers/favorites_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          2,
-          2,
-          null,
-          null,
-          1,
-          null,
-          4,
-          4,
-          0,
-          0,
-          0,
-          null,
-          4,
-          4,
-          4,
-          4,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/lukejames-erickson/turing/mod_2/projects/adopt_dont_shop_paired/app/controllers/adoption_apps_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1599001118
+    "timestamp": 1599005407
   }
 }

@@ -35,6 +35,23 @@ RSpec.describe 'when a user wants to apply to adopt a pet' do
     expect(current_path).to eq("/adoption_apps/new")
   end
 
+  it "has fields for visitor to fill in their information" do
+
+    fill_in 'Name', with: "Balthezar"
+    fill_in 'Address', with: '1554 Diamond Lane'
+    fill_in 'City', with: 'Destin'
+    fill_in 'State', with: 'FL'
+    fill_in 'Zip', with: '32540'
+    fill_in 'Phone Number', with: '8675309'
+    fill_in 'Description', with: 'I am aight'
+    fill_in 'Creep Status', with: 'Creep'
+
+    click_on 'Submit Application'
+    expect(current_path).to eq('/favorites/')
+    expect(page).to have_content("Balthezar")
+  end
+
+  
   it 'can select the pets at the top of the form' do
     click_link("Adopt Your Favorite Pets")
 
@@ -42,25 +59,13 @@ RSpec.describe 'when a user wants to apply to adopt a pet' do
 
     expect(page).to have_content(@pet_1.name) || have_content("You have no favorited pets!")
 
+    #We're going to expect it to have a link to this pet and that pet, but not this unfavorited BAD pet.  This Pet is up for DESTRUCTION
   end
+
 end
 
 # At the top of the form, I can select from the pets of which I've favorited for which I'd like this application to apply towards (can be more than one)
-#
 
 
-
-
-
-# When I select one or more pets, and fill in my
-# - Name
-# - Address
-# - City
-# - State
-# - Zip
-# - Phone Number
-# - Description of why I'd make a good home for this/these pet(s)
-# - Are you a creep?
-# And I click on a button to submit my application
 # I see a flash message indicating my application went through for the pets that were selected
 # And I'm taken back to my favorites page where I no longer see the pets for which I just applied listed as favorites

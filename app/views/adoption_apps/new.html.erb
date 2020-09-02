@@ -1,13 +1,15 @@
 <h1>Please select the pet(s) you'd like to apply for:</h1>
 
+
+
 <h2>Favorite Pets:</h2>
 <% if @favorites.favorite_pets == {} %>
     <%= "You have no favorited pets!" %>
 <% else %>
     <% @favorites.favorite_pets.each do |favorite_pet| %>
-
         <% @pets.each do |pet| %>
           <% if pet.id == favorite_pet[0].to_i %>
+            <h2><%= "SELECT CHECK MARK" %></h2>
             <h3><%= link_to pet.name, "/shelters/#{pet.shelter_id}/pets/#{pet.id}" %>  </h3>
             <h3><%= pet.image %></h3>
           <% else %>
@@ -15,4 +17,27 @@
           <% end %>
         <% end %>
     <% end %>
+<% end %>
+
+<h3>My Information</h3>
+
+<%= form_tag '/adoption_app' do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %></br>
+  <%= label_tag :address %>
+  <%= text_field_tag :address %></br>
+  <%= label_tag :city %>
+  <%= text_field_tag :city %></br>
+  <%= label_tag :state %>
+  <%= text_field_tag :state %></br>
+  <%= label_tag :zip %>
+  <%= text_field_tag :zip %></br>
+  <%= label_tag :phone_number %>
+  <%= text_field_tag :phone_number %></br>
+  <%= label_tag :description %>
+  <%= text_field_tag :description %></br>
+  <%= label_tag :creep_status %>
+  <%= text_field_tag :creep_status %></br>
+
+  <%= submit_tag 'Submit Application' %>
 <% end %>
