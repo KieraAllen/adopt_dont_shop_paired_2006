@@ -10,13 +10,19 @@ class AdoptionAppsController < ApplicationController
   end
 
   def create
+    @pets = Pet.all
     AdoptionApp.create(adoption_app_params)
-    #something that removes the selected pets from favorites
-
-    # session[:favorites].delete(params[:id])
-    # flash[:notice] = "#{pet.name} has been removed from your Favorites!"
-    # redirect_to "/pets/#{pet.id}"
-
+    # require "pry"; binding.pry
+    # favorites.favorite_pets.each do |favorite_pet|
+    #   something_that_stores_the_checked_data.each do |data|
+    #     if data.pet_id == favorite_pet[0].to_i
+    #       flash[:notice] = "Your application for #{pet.name} has been submitted!"
+    #
+    #       #something that removes the selected pets from favorites
+    #       session[:favorites].delete(pet)
+    #     end
+    #   end
+    # end
     redirect_to '/favorites'
   end
 
